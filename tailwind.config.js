@@ -1,14 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class', // Enables class-based dark mode
   theme: {
     extend: {
       colors: {
-        primary: '#0F2027', // Dark Blue (Main Branding)
-        secondary: '#2C5364', // Teal Blue (Accent)
-        accent: '#55DDE0', // Cyan (Highlight / Call-to-action)
-        background: '#F8FAFC', // Light Gray (Page Background)
-        text: '#1E293B', // Dark Grayish Blue (Text Color)
+        primary: {
+          DEFAULT: '#0F2027', // Light mode primary
+          dark: '#1B263B', // Dark mode primary
+        },
+        secondary: {
+          DEFAULT: '#2C5364',
+          dark: '#334E68',
+        },
+        accent: {
+          DEFAULT: '#55DDE0',
+          dark: '#48A9A6',
+        },
+        background: {
+          DEFAULT: '#F8FAFC', // Light mode background
+          dark: '#121212', // Dark mode background
+        },
+        text: {
+          DEFAULT: '#1E293B',
+          dark: '#E5E7EB',
+        },
       },
     },
   },

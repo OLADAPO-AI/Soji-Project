@@ -4,6 +4,10 @@ export default {
   darkMode: 'class', // Enables class-based dark mode
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'], // Body text
+        heading: ['Poppins', 'sans-serif'], // Headings
+      },
       colors: {
         primary: {
           DEFAULT: '#0F2027', // Light mode primary

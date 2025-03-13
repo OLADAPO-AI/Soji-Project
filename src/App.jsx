@@ -1,7 +1,25 @@
-export default function App() {
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./component/navbar";
+import Homepage from "./pages/Homepage";
+import Services from "./pages/servicesPage";
+import Portfolio from "./pages/portfolio";
+import Contact from "./pages/contactPage";
+
+const App = () => {
   return (
-    <a className="p-4 font-heading bg-primary flex justify-center text-xl font-semibold dark:bg-primary-dark text-white shadow-lg hover:text-accent dark:hover:text-accent-dark">
-      Lauching on 17/3/2025
-    </a>
-  )
-}
+    <BrowserRouter>
+      <div className="bg-background-dark min-h-[screen] w-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+};
+
+export default App;

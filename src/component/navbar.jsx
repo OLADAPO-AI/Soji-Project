@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="pl-4 lg:pl-20">
         <Link
           to={"/"}
-          className="lg:text-4xl text-2xl font-bold font-sans pr-6 tracking-wide text-secondary-dark flex"
+          className="lg:text-4xl text-2xl font-bold font-sans tracking-wide text-secondary-dark flex"
         >
           <span>Joro</span> <span className="text-accent-dark">Services</span>
         </Link>

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const linkInfo = [
+// eslint-disable-next-line react-refresh/only-export-components
+export const LinkInfo = [
   { title: "Services", path: "/services" },
   { title: "Portfolio", path: "/portfolio" },
   { title: "Contact", path: "/contact" },
@@ -11,7 +12,7 @@ const NavLink = () => {
   return (
     <div className="hidden items-center lg:flex px-12 w-2/5">
       <div className="flex flex-row space-x-2 mx-auto w-full justify-between tracking-wider px-4 items-center">
-        {linkInfo.map((link, i) => (
+        {LinkInfo.map((link, i) => (
           <Link
             key={i}
             to={link.path}

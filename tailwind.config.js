@@ -6,10 +6,12 @@ export default {
     extend: {
       backgroundImage: {
         "hero-bg": "url('/src/assets/bg6.jpg')",
+        bgImage2: "url('/src/assets/bg7.jpg')",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"], // Body text
-        heading: ["Poppins", "sans-serif"], // Headings
+        poppins: ["Poppins", "sans-serif"], // Headings
+        inter: ["Inter", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
       colors: {
         primary: {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Logo from "./logo";
@@ -10,7 +10,7 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: isOpen ? "100%" : 0 }}
-      className={`fixed top-0 left-0 w-full mt-[81px] bg-black text-white overflow-hidden transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full mt-[81px] bg-black bg-bgImage2 bg-cover text-white overflow-hidden transition-all duration-300 ${
         isOpen ? "h-screen" : "h-0"
       }`}
     >
@@ -21,7 +21,7 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
             <Link
               to={item.path}
               onClick={toggleMenu}
-              className="flex justify-between w-full max-w-full py-3 px-4 text-lg border-b border-gray-400 hover:text-accent-dark"
+              className="flex justify-between w-full max-w-full py-3 px-4 text-base border-b border-gray-400 hover:text-accent-dark"
             >
               {item.title}
               <ArrowUpRight size={20} />

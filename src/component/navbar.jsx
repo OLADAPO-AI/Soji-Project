@@ -4,9 +4,20 @@ import NavLink from "./links";
 import MobileNavbar from "./mobileNav";
 import Logo from "./logo";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
+  const location = useLocation();
+
+  // Function to determine navbar background based on route
+  const getNavbarBg = () => {
+    if (location.pathname === "/") {
+      return "bg-black/30";
+    } else {
+      return "bg-black/80";
+    }
+  };
 
   // Close the mobile menu when window size is larger than lg (1024px)
   useEffect(() => {
@@ -21,12 +32,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="bg-background/15 shadow shadow-accent flex justify-between py-2 mx-auto h-20 items-center lg:h-24 rounded-b-md fixed top-0 left-0 w-full z-50 text-white px-2">
+    <div
+      className={`${getNavbarBg()} z-50 shadow shadow-accent flex justify-between py-2 mx-auto h-20 items-center lg:h-24 rounded-b-md fixed top-0 left-0 w-full text-white px-2 transition-all duration-300`}
+    >
       <Logo />
       <NavLink />
-      <div className="md:flex hidden justify-center w-[250px] ">
-        <Button bg={""} title={"Get in Touch"} />
+      <div className="md:flex hidden justify-center w-[250px]">
+        <Link to={"/getintouch"}>
+          <Button bg={""} title={"Get in Touch"} />
+        </Link>
       </div>
+
       {/* Mobile Menu Button */}
       <button
         className="lg:hidden absolute bg-accent/20 p-1 lg:p-2 right-4 rounded-md"

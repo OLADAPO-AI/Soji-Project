@@ -33,26 +33,33 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${getNavbarBg()} z-50 shadow shadow-accent flex justify-between py-2 mx-auto h-20 items-center lg:h-24 rounded-b-md fixed top-0 left-0 w-full text-white px-2 transition-all duration-300`}
+      className={`${getNavbarBg()} z-50  flex justify-between py-2  items-center  rounded-md fixed top-0 p-4 w-full bg-transparent text-white px-2 transition-all duration-300`}
     >
-      <Logo />
-      <NavLink />
-      <div className="md:flex hidden justify-center w-[250px]">
-        <Link to={"/getintouch"}>
-          <Button bg={""} title={"Get in Touch"} />
-        </Link>
-      </div>
-
-      {/* Mobile Menu Button */}
-      <button
-        className="lg:hidden absolute bg-accent/20 p-1 lg:p-2 right-4 rounded-md"
-        onClick={() => setOpenNav(!openNav)}
+      <div
+        className={`${getNavbarBg()} z-50  shadow-sm shadow-accent/40 flex justify-between py-2 h-[50px] items-center lg:h-16 rounded-md  top-4 mx-auto left-4 w-full  text-white px-2 transition-all duration-300`}
       >
-        {openNav ? <X size={24} color="white" /> : <Menu size={24} />}
-      </button>
+        <Logo />
+        <NavLink />
+        <div className="md:flex hidden justify-center w-[250px]">
+          <Link to={"/getintouch"}>
+            <Button bg={""} title={"Get in Touch"} />
+          </Link>
+        </div>
 
-      {/* Mobile Navbar */}
-      <MobileNavbar isOpen={openNav} toggleMenu={() => setOpenNav(!openNav)} />
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden absolute bg-accent/20 p-1 lg:p-2 right-4 rounded-md"
+          onClick={() => setOpenNav(!openNav)}
+        >
+          {openNav ? <X size={24} color="white" /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Navbar */}
+        <MobileNavbar
+          isOpen={openNav}
+          toggleMenu={() => setOpenNav(!openNav)}
+        />
+      </div>
     </div>
   );
 };

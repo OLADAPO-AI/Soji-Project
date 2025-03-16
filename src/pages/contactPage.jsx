@@ -1,7 +1,7 @@
 import React from "react";
 import CardGrid from "../component/CardGrid";
 import Footer from "../component/Footer";
-import LinkBtn from "../component/linkBtn";
+import LinkBtn from "../component/socialLinkBtn";
 const Contact = () => {
   return (
     <main className=" bg-gray-100 flex flex-col items-center justify-center pt-40 min-h-screen w-screen text-gray-900">

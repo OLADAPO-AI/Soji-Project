@@ -7,6 +7,8 @@ export default {
       backgroundImage: {
         "hero-bg": "url('/src/assets/bg6.jpg')",
         bgImage2: "url('/src/assets/bg7.jpg')",
+        bgImage3: "url('/src/assets/bg8.jpg')",
+        bgImage4: "url('/src/assets/bg9.jpg')",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"], // Headings

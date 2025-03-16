@@ -10,7 +10,7 @@ import About from "./pages/contactPage";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="bg-background-dark min-h-[screen] w-screen font-nunito">
+      <div className=" min-h-[screen] w-screen font-nunito">
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />

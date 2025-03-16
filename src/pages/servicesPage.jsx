@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../component/Footer";
 
 export const OurServices = [
   {
@@ -70,6 +71,7 @@ const Services = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

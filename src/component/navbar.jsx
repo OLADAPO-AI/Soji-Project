@@ -8,7 +8,18 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = document.getElementById("hero").offsetHeight;
+      setScrolled(window.scrollY > heroHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Function to determine navbar background based on route
   const getNavbarBg = () => {
@@ -36,7 +47,9 @@ const Navbar = () => {
       className={`${getNavbarBg()} z-50  flex justify-between py-2  items-center  rounded-md fixed top-0 p-4 w-full bg-transparent text-white px-2 transition-all duration-300`}
     >
       <div
-        className={`${getNavbarBg()} z-50  shadow-sm shadow-accent/40 flex justify-between py-2 h-[50px] items-center lg:h-16 rounded-md  top-4 mx-auto left-4 w-full  text-white px-2 transition-all duration-300`}
+        className={`${getNavbarBg()} ${
+          scrolled ? "bg-white/20 shadow-lg" : "bg-transparent"
+        } shadow-sm shadow-accent/40 flex justify-between py-2 h-[50px] items-center backdrop-blur-md lg:h-16 rounded-md  top-4 mx-auto left-4 w-full  text-white px-2 transition-all duration-300`}
       >
         <Logo />
         <NavLink />

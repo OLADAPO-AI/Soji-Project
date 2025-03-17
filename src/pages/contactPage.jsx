@@ -1,7 +1,7 @@
-import React from "react";
-import CardGrid from "../component/CardGrid";
-import Footer from "../component/Footer";
-import LinkBtn from "../component/socialLinkBtn";
+import React from 'react'
+import CardGrid from '../component/CardGrid'
+import Footer from '../component/Footer'
+import LinkBtn from '../component/socialLinkBtn'
 const Contact = () => {
   return (
     <main className=" bg-gray-100 flex flex-col items-center justify-center pt-40 min-h-screen w-screen text-gray-900">
@@ -11,43 +11,71 @@ const Contact = () => {
           <div className="flex flex-col lg:flex-row gap-6">
             {/* First Row */}
             <div className="flex  flex-col justify-between gap-1 w-full lg:w-1/2">
-              <div className=" flex-1 min-w-[200px]">
-                <h3 className="text-4xl lg:text-5xl mb-8 font-bold text-gray-700">
+              <div className="bg-glass-lightBlue backdrop-blur-[10px] p-6 flex flex-col gap-3 rounded-2xl shadow-md flex-1 min-w-[200px]">
+                <h3 className="text-4xl lg:text-5xl mb-8 font-bold text-white">
                   Want to discuss a project?
                 </h3>
-                <p className="text-lg mt-4 text-gray-500">
+                <p className="text-lg mt-4 text-gray-50">
                   Tell us a little about your project and one of our team will
                   be in touch with you as soon as possible.
                 </p>
               </div>
-              <div className=" px-6 flex flex-col gap-8 mb-20  flex-1 min-w-[200px]">
+              <div className="bg-glass-lightBlue backdrop-blur-[10px] p-6 flex flex-col justify-around rounded-2xl shadow-md flex-1 min-w-[200px]">
                 <div>
-                  <h6 className="text-xl  font-semibold text-gray-700 ">
+                  <h6 className="text-xl  font-semibold text-white ">
                     General Enquiries
                   </h6>
-                  <p className="text-lg underline text-gray-500 mb-2">
-                    bighead@gmail.com{" "}
+                  <p className="text-lg underline text-white mb-2">
+                    bighead@gmail.com{' '}
                   </p>
                 </div>
                 <div>
-                  <h6 className="text-xl font-semibold text-gray-700 ">
+                  <h6 className="text-xl font-semibold text-white ">
                     Support Enquiries
                   </h6>
-                  <p className="text-lg underline text-gray-500 mb-2">
-                    bighead@gmail.com{" "}
+                  <p className="text-lg underline text-white mb-2">
+                    bighead@gmail.com{' '}
                   </p>
                 </div>
                 <div>
-                  <h6 className="text-xl font semibold text-gray-700 ">
+                  <h6 className="text-xl font semibold text-white ">
                     Interested in joining the team ?
                   </h6>
-                  <p className="text-lg underline text-gray-500 mb-2">
-                    bighead@gmail.com{" "}
+                  <p className="text-lg underline text-white mb-2">
+                    bighead@gmail.com{' '}
                   </p>
                 </div>
               </div>
-              <div className=" p-6 rounded-2xl shadow-md flex-1 min-w-[200px]">
-                <LinkBtn title={"twitter"} bg={"blue-600"}></LinkBtn>
+
+              <div className="bg-glass-lightBlue backdrop-blur-[10px] p-6 flex flex-col justify-around rounded-2xl shadow-md flex-1 min-w-[200px]">
+                <div>
+                  <h4 className="text-3xl lg:text-4xl mb-8 font-bold text-white dark:text-gray-200">
+                    What happens next?
+                  </h4>
+                </div>
+
+                <div className="flex flex-col gap-4 p-2 relative">
+                  {/* Connecting line */}
+                  <div className="absolute left-3 top-0 h-full w-0.5 bg-gray-400 dark:bg-gray-600"></div>
+
+                  {/* Bullet points and text */}
+                  <p className="text-sm md:text-base text-gray-50 dark:text-gray-300 relative pl-6">
+                    <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-gray-400 dark:bg-gray-600 rounded-full"></span>
+                    An expert contacts you after thoroughly reviewing your
+                    requirements.
+                  </p>
+                  <p className="text-sm md:text-base text-gray-50 dark:text-gray-300 relative pl-6">
+                    <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-gray-400 dark:bg-gray-600 rounded-full"></span>
+                    If necessary, we provide you with a Non-Disclosure Agreement
+                    (NDA) and initiate the Discovery phase, ensuring maximum
+                    confidentiality and alignment on project objectives.
+                  </p>
+                  <p className="text-sm md:text-base text-gray-50 dark:text-gray-300 relative pl-6">
+                    <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-gray-400 dark:bg-gray-600 rounded-full"></span>
+                    We provide a project proposal, including estimates, scope
+                    analysis, CVs, and more.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -128,7 +156,7 @@ const Contact = () => {
 
                 <div className="relative">
                   <label className="block font-medium mb-1">
-                    How did you hear about us{" "}
+                    How did you hear about us{' '}
                     <span className="text-red-500">*</span>
                   </label>
                   <div className="relative">
@@ -152,7 +180,7 @@ const Contact = () => {
 
                 <div>
                   <label className="block font-medium mb-1">
-                    Tell us about your project{" "}
+                    Tell us about your project{' '}
                     <span className="text-red-500">*</span>
                   </label>
                   <p className="text-sm text-gray-500 mb-2">
@@ -168,16 +196,16 @@ const Contact = () => {
                 <div className="flex items-start gap-2">
                   <input type="checkbox" required className="mt-1" />
                   <label className="text-sm text-gray-700">
-                    I agree to the{" "}
+                    I agree to the{' '}
                     <a href="#" className="text-blue-600 underline">
                       Privacy Policy
-                    </a>{" "}
+                    </a>{' '}
                     and Data Protection terms.
                   </label>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white p-3 rounded-xl hover:bg-blue-700"
+                  className="w-full before:bg-accent hover:bg-accent-dark  p-3 rounded-xl bg-accent text-white transition duration-300 ease-in-out font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Send Message
                 </button>
@@ -202,7 +230,7 @@ const Contact = () => {
         </section>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

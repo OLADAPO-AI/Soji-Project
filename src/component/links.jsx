@@ -1,26 +1,27 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const LinkInfo = [
-  { title: "Services", path: "/services" },
-  { title: "Portfolio", path: "/portfolio" },
-  { title: "About", path: "/about" },
-  { title: "Contact", path: "/contact" },
-];
+  { title: 'Services', path: '/services' },
+  { title: 'Development', path: '/development' },
+  { title: 'Why JoroServices', path: '/joroServices' },
+  { title: 'Careers', path: '/careers' },
+  { title: 'Blog', path: '/blog' },
+]
 
 const NavLink = () => {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
-    <div className="hidden items-center lg:flex w-2/5">
-      <div className="flex flex-row space-x-2 mx-auto w-full justify-between tracking-wider px-4 items-center">
+    <div className="hidden items-center lg:flex w-3/5">
+      <div className="flex flex-row space-x- mx-auto w-full justify-around tracking-wider px-2 items-center">
         {LinkInfo.map((link, i) => (
           <Link
             key={i}
             to={link.path}
-            className={`relative text-[16px] lg:text-[20px] font-semibold hover:bg-neutral-700/70 xl:px-8 lg:px-2 py-2 ${
-              location.pathname === link.path ? "text-accent" : "text-white"
+            className={`relative text-[16px] lg:text-[14px] font-semibold lg:font-bold hover:bg-neutral-700/70 xl:px-8 lg:px-2 py-2 ${
+              location.pathname === link.path ? 'text-accent' : 'text-white'
             }  group  transition-all duration-300`}
           >
             {link.title}
@@ -29,7 +30,7 @@ const NavLink = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NavLink;
+export default NavLink

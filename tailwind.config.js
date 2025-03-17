@@ -7,7 +7,10 @@ export default {
       backgroundImage: {
         "hero-bg": "url('/heroo.gif')",
         bgImage2: "url('/src/assets/bg7.jpg')",
-        // 'glass-effect':
+        bgImage3: "url('/src/assets/bg8.jpg')",
+        bgImage4: "url('/src/assets/bg9.jpg')",
+        bgImage5: "url('/src/assets/bg10.jpg')",
+        bgImage6: "url('/src/assets/bg11.jpg')",
         //   'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
       },
       fontFamily: {

@@ -10,7 +10,7 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: isOpen ? "100%" : 0 }}
-      className={`fixed inset-0 w-full top-0 left-0 right-0 bg-black bg-bgImage2 bg-cover -z-20 text-white overflow-hidden transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full mt-[60px] bg-bgImage2 backdrop-blur-sm bg-cover text-white overflow-hidden transition-all duration-300 ${
         isOpen ? "h-screen" : "h-0"
       }`}
     >

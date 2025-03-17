@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-bg": "url('/src/assets/bg6.jpg')",
+        "hero-bg": "url('/heroo.gif')",
         bgImage2: "url('/src/assets/bg7.jpg')",
-        bgImage3: "url('/src/assets/bg8.jpg')",
-        bgImage4: "url('/src/assets/bg9.jpg')",
+        // 'glass-effect':
+        //   'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"], // Headings
@@ -19,6 +19,10 @@ export default {
         primary: {
           DEFAULT: "#0F2027", // Light mode primary
           dark: "#1B263B", // Dark mode primary
+        },
+
+        glass: {
+          lightBlue: "rgba(173, 216, 230, 0.7)", // Light blue with 70% opacity
         },
         secondary: {
           DEFAULT: "#2C5364",
@@ -37,6 +41,10 @@ export default {
           DEFAULT: "#accbd4",
           dark: "#E5E7EB",
         },
+      },
+      backdropFilter: {
+        none: "none",
+        blur: "blur(10px)", // Adds backdrop blur for glass effect
       },
     },
   },

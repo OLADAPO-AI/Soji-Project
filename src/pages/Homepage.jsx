@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LogoSlider from "../component/slider";
-import Footer from "../component/Footer";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import LogoSlider from '../component/slider'
+import Footer from '../component/Footer'
 
 const Homepage = () => {
   return (
@@ -33,7 +33,7 @@ const Homepage = () => {
               innovation and efficiency
             </p>
             <div className="flex justify-center gap-4 flex-col sm:flex-row">
-              <Link to={"/getintouch"}>
+              <Link to={'/getintouch'}>
                 <div className="text-lg lg:text-xl px-9 py-4  before:bg-accent hover:bg-accent-dark  p-3 rounded-xl bg-accent text-white transition duration-300 ease-in-out font-semibold disabled:opacity-50 disabled:cursor-not-allowed">
                   Get a consultation
                 </div>
@@ -52,7 +52,7 @@ const Homepage = () => {
       <div className=" min-h-screen w-screen text-neutral-50">metrics</div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Homepage;
+export default Homepage

@@ -11,7 +11,7 @@ const Contact = () => {
           <div className="flex flex-col lg:flex-row gap-6">
             {/* First Row */}
             <div className="flex  flex-col justify-between gap-1 w-full lg:w-1/2">
-              <div className="bg-glass-lightBlue backdrop-blur-[10px] p-6 flex flex-col gap-3 rounded-2xl shadow-md flex-1 min-w-[200px]">
+              <div className="bg-[#25221d] backdrop-blur-[10px] p-6 flex flex-col gap-3 rounded-2xl shadow-md flex-1 min-w-[200px]">
                 <h3 className="text-4xl lg:text-5xl mb-8 font-bold text-white">
                   Want to discuss a project?
                 </h3>
@@ -20,7 +20,7 @@ const Contact = () => {
                   be in touch with you as soon as possible.
                 </p>
               </div>
-              <div className="bg-glass-lightBlue backdrop-blur-[10px] p-6 flex flex-col justify-around rounded-2xl shadow-md flex-1 min-w-[200px]">
+              <div className="bg-[#664b25] backdrop-blur-[10px] p-6 flex flex-col justify-around rounded-2xl shadow-md flex-1 min-w-[200px]">
                 <div>
                   <h6 className="text-xl  font-semibold text-white ">
                     General Enquiries
@@ -47,7 +47,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-glass-lightBlue backdrop-blur-[10px] p-6 flex flex-col justify-around rounded-2xl shadow-md flex-1 min-w-[200px]">
+              <div className="bg-[#1e1e1e] backdrop-blur-[10px] p-6 flex flex-col justify-around rounded-2xl shadow-md flex-1 min-w-[200px]">
                 <div>
                   <h4 className="text-3xl lg:text-4xl mb-8 font-bold text-white dark:text-gray-200">
                     What happens next?

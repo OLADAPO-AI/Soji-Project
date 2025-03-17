@@ -5,7 +5,7 @@ import { OurServices } from "../pages/servicesPage";
 
 export const ServiceOverlay = () => {
   return (
-    <div className="absolute -left-4 top-full w-[600px] bg-black/80 shadow-lg rounded-lg p-6 text-sm text-white transition duration-300 ease-in-out">
+    <div className="absolute left-4 top-full w-[600px] bg-black/80 shadow-lg rounded-lg p-6 text-sm text-white transition duration-300 ease-in-out">
       <div className="grid grid-cols-2 gap-4">
         <div>
           <h3 className="text-accent font-semibold mb-2">Our Services →</h3>

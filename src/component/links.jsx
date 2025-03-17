@@ -22,7 +22,7 @@ const NavLink = () => {
             onMouseLeave={() => setHoveredLink(null)}
             onClick={() => setHoveredLink(null)}
             to={link.path}
-            className="relative text-[16px] xl:px-8 lg:px-2 py-1 px-4 lg:text-[20px] font-semibold hover:bg-white/10 text-white group hover:text-text-dark transition-all duration-300"
+            className="relative text-[14px] xl:px-8 lg:px-2 py-1 px-4 font-semibold hover:bg-white/10 text-white group hover:text-text-dark transition-all duration-300"
           >
             {link.title}
             <span className="absolute left-0 bottom-0 w-full h-[2px] bg-accent group-hover:scale-x-100 scale-x-0 origin-left transition-transform duration-300 ease-in-out hover:scale-x-100"></span>

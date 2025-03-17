@@ -13,9 +13,9 @@ const Navbar = () => {
   // Function to determine navbar background based on route
   const getNavbarBg = () => {
     if (location.pathname === "/") {
-      return "bg-black/30";
+      return "bg-black/20";
     } else {
-      return "bg-black/80";
+      return "bg-black/30";
     }
   };
 
@@ -36,7 +36,7 @@ const Navbar = () => {
       className={`${getNavbarBg()} z-50  flex justify-between py-2  items-center  rounded-md fixed top-0 p-4 w-full bg-transparent text-white px-2 transition-all duration-300`}
     >
       <div
-        className={`${getNavbarBg()}   shadow-m shadow-accent/40 flex justify-between py-2 h-[50px] items-center lg:h-16 rounded-md  top-4 mx-auto left-4 w-full  text-white px-2 transition-all duration-300`}
+        className={`${getNavbarBg()}   shadow-m shadow-accent/40 flex justify-between py-2 h-[50px] items-center lg:h-16 rounded-md backdrop-blur-lg top-4 mx-auto left-4 w-full  text-white px-2 transition-all duration-300`}
       >
         <Logo />
         <NavLink />

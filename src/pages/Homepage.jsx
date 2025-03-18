@@ -143,7 +143,7 @@ const Homepage = () => {
         </div>
       </section>
       {/* latest insigth */}
-      <section className="min-h-screen bg-white/90 rounded-t-3xl pt-20 lg:px-20 px-6 sm:px-10">
+      <section className="min-h-screen bg-white/90 rounded-t-3xl py-20 lg:px-20 px-6 sm:px-10">
         <div className="flex flex-col divide-y-[1px] divide-gray-300 w-full">
           <div className="pb-8">
             <div className="flex text-secondary items-center flex-row gap-4 text-sm font-semibold">

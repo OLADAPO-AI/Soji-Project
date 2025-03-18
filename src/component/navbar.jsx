@@ -25,7 +25,7 @@ const Navbar = () => {
   const getNavbarBg = () => {
     if (location.pathname === "/") {
       return `bg-black/30 ${
-        scrolled ? "bg-white/20 shadow-lg" : "bg-transparent"
+        scrolled ? "bg-black/20 shadow-lg" : "bg-transparent"
       }`;
     } else {
       return "bg-black/60 backdrop-blur-sm";

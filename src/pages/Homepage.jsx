@@ -6,6 +6,8 @@ import TestimonilaGrid from "../component/TestimonialGrid";
 import { ImAirplane } from "react-icons/im";
 import ImpressionCard from "../component/impressionCard";
 import { OurServices } from "./servicesPage";
+import { FaDotCircle } from "react-icons/fa";
+import { insightData } from "../data";
 const Homepage = () => {
   return (
     <div>
@@ -140,6 +142,64 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+      {/* latest insigth */}
+      <section className="min-h-screen bg-white/90 rounded-t-3xl pt-20 lg:px-20 px-6 sm:px-10">
+        <div className="flex flex-col divide-y-[1px] divide-gray-300 w-full">
+          <div className="pb-8">
+            <div className="flex text-secondary items-center flex-row gap-4 text-sm font-semibold">
+              <FaDotCircle />
+              <span className="uppercase text-gray-500">Featured News</span>
+            </div>
+            <div className="pt-4 font-bold text-3xl capitalize">
+              latest news and insights
+            </div>
+          </div>
+
+          {insightData.map((data, i) => {
+            return (
+              <Link
+                key={i}
+                to={data.link}
+                className="grid lg:gap-20 md:gap-10 gap-2 py-8 grid-cols-1 md:grid-cols-5"
+              >
+                <div className="md:col-span-2 ">
+                  <img
+                    src={data.image}
+                    className="h-[200px] rounded-xl w-full lg:w-4/5"
+                  />
+                </div>
+                <div className="md:col-span-3 py-2 relative ">
+                  {data.category && (
+                    <div className="flex text-secondary items-center flex-row md:py-3 gap-4 text-sm font-semibold">
+                      <FaDotCircle />
+                      <span className="uppercase text-gray-500">
+                        {data.category}
+                      </span>
+                    </div>
+                  )}
+                  <h2 className="md:pt-4 pb-2 hover:underline text-base lg:text-lg font-semibold tracking-wider font-sans">
+                    {data.title}
+                  </h2>
+                  <div className="flex md:pt-10 mt-auto flex-row ">
+                    <img
+                      src={data.authorImg}
+                      alt={data.author}
+                      className="w-12 h-12 mr-4 rounded-full "
+                    />
+                    <p className="rounded-xl  bg-white text-center px-4 my-auto py-1 ml-2 text-gray-500 text-sm">
+                      {data.author}
+                    </p>
+                    <p className="rounded-xl  bg-white text-center px-4 my-auto py-1 ml-2 text-gray-500 text-sm">
+                      {data.datePosted}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
       {/* footer */}
       <Footer />
     </div>

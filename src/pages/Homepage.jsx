@@ -70,7 +70,7 @@ const Homepage = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-40 object-cover rounded-lg group-hover:opacity-80 transition"
+                    className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                     <h3 className="text-white text-lg font-semibold">
@@ -84,7 +84,7 @@ const Homepage = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-52 object-cover rounded-lg group-hover:opacity-80 transition"
+                    className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                     <h3 className="text-white text-lg font-semibold">
@@ -93,6 +93,17 @@ const Homepage = () => {
                   </div>
                 </div>
               ))}
+              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-secondary via-accent to-secondary backdrop-blur-xl rounded-3xl bg-gradient-to-bl flex flex-col px-4">
+                <h3 className="text-center mt-8 sm:text-3xl lg:text-4xl text-2xl font-bold">
+                  Need a technical solution?
+                </h3>
+                <Link
+                  to={"/getintouch"}
+                  className="bg-black/60 w-full rounded-2xl shadow-lg py-3 mt-12 shadow-black/70 hover:bg-black/50 hover:text-white/80 text-center text-xl font-bold"
+                >
+                  Reach out
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -102,9 +113,11 @@ const Homepage = () => {
       <div className=" min-h-screen w-screen text-neutral-50">
         featured post
       </div>
+      {/* portfolio */}
       <section className=" min-h-screen w-screen text-neutral-50">
         portfolio{" "}
       </section>
+      {/* blog */}
       <section className=" min-h-screen  w-screen text-neutral-50">
         blog
       </section>
@@ -127,6 +140,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+      {/* footer */}
       <Footer />
     </div>
   );

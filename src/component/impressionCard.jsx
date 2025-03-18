@@ -66,6 +66,7 @@ import { Link } from "react-router-dom";
 // }
 
 // export default ImpressionCard
+
 const image = [
   { img: photo1, alt: "photo-1" },
   { img: photo3, alt: "photo-3" },

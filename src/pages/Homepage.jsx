@@ -1,8 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LogoSlider from "../component/slider";
-import Footer from "../component/Footer";
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import LogoSlider from '../component/slider'
+import Footer from '../component/Footer'
+import TestimonilaGrid from '../component/TestimonialGrid'
+import { ImAirplane } from 'react-icons/im'
+import ImpressionCard from '../component/impressionCard'
 const Homepage = () => {
   return (
     <div>
@@ -33,7 +35,7 @@ const Homepage = () => {
               innovation and efficiency
             </p>
             <div className="flex justify-center gap-4 flex-col sm:flex-row">
-              <Link to={"/getintouch"}>
+              <Link to={'/getintouch'}>
                 <div className="text-lg lg:text-xl px-9 py-4  before:bg-accent hover:bg-accent-dark  p-3 rounded-xl bg-accent text-white transition duration-300 ease-in-out font-semibold disabled:opacity-50 disabled:cursor-not-allowed">
                   Get a consultation
                 </div>
@@ -68,12 +70,34 @@ const Homepage = () => {
       <div className=" min-h-screen w-screen text-neutral-50">
         featured post
       </div>
-      <div className=" min-h-screen w-screen text-neutral-50">portfolio </div>
-      <div className=" min-h-screen w-screen text-neutral-50">blog</div>
-      <div className=" min-h-screen w-screen text-neutral-50">metrics</div>
+      <section className=" min-h-screen w-screen text-neutral-50">
+        portfolio{' '}
+      </section>
+      <section className=" min-h-screen  w-screen text-neutral-50">
+        blog
+      </section>
+      {/* Testimonial and Gett to know section */}
+      <section className="h-auto bg-white  w-screen rounded-[40px] overflow-hidden">
+        <div className="rounded-2xl">
+          <div className="flex flex-col justify-between align-middle gap-4 lg:pt-16 pt-10">
+            <h2 className="text-4xl text-start lg:text-5xl font-bold leading-tight lg:col-span-3 px-8">
+              Testimonials and reviews
+            </h2>
+            <div className="h-auto pt-4 w-full flex flex-col lg:flex-row gap-4 justify-center items-center lg:gap-8 lg:justify-between lg:items-start">
+              {/* Slider Container */}
+              <div className="w-screen ">
+                <TestimonilaGrid />
+              </div>
+            </div>
+            <div className=" h-auto w-screen">
+              <ImpressionCard />
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Homepage;
+export default Homepage

@@ -66,7 +66,7 @@ const Homepage = () => {
               {OurServices[0].serviceList.map((service, index) => (
                 <div key={index} className="relative group">
                   <img
-                    src={""}
+                    src={service.image}
                     alt={service.title}
                     className="w-full h-40 object-cover rounded-lg group-hover:opacity-80 transition"
                   />
@@ -80,7 +80,7 @@ const Homepage = () => {
               {OurServices[1].SpecializedServiceList.map((service, index) => (
                 <div key={index} className="relative group">
                   <img
-                    src={""}
+                    src={service.image}
                     alt={service.title}
                     className="w-full h-52 object-cover rounded-lg group-hover:opacity-80 transition"
                   />
@@ -96,7 +96,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* featured post section */}
+      {/* featured  */}
       <div className=" min-h-screen w-screen text-neutral-50">
         featured post
       </div>

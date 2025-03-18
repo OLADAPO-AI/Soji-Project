@@ -4,20 +4,40 @@ import Footer from "../component/Footer";
 export const OurServices = [
   {
     serviceList: [
-      { title: "Custom Software Development", link: "/", image: "" },
-      { title: "Web & Mobile App Development", link: "/", image: "" },
-      { title: "Cloud Solutions & Migration", link: "/", image: "" },
-      { title: "Enterprise Software Development", link: "/", image: "" },
-      { title: "Cloud Automation & Monitoring", link: "/", image: "" },
+      { title: "Custom Software Development", link: "/", image: "/serv1.jpg" },
+      {
+        title: "Web & Mobile App Development",
+        link: "/",
+        image: "/serv2.jpg",
+      },
+      { title: "Cloud Solutions & Migration", link: "/", image: "/serv3.jpg" },
+      {
+        title: "Enterprise Software Development",
+        link: "/",
+        image: "/serv4.jpg",
+      },
+      {
+        title: "Cloud Automation & Monitoring",
+        link: "/",
+        image: "/serv5.jpg",
+      },
     ],
   },
   {
     SpecializedServiceList: [
-      { title: "Digital Marketing", link: "/", image: "" },
-      { title: "IT Infrastructure Management", link: "/", image: "" },
-      { title: "DevOps as a Service", link: "/", image: "" },
-      { title: "CI/CD Implementation", link: "/", image: "" },
-      { title: "Infrastructure as Code (IaC)", link: "/", image: "" },
+      { title: "Digital Marketing", link: "/", image: "/serv1.jpg" },
+      {
+        title: "IT Infrastructure Management",
+        link: "/",
+        image: "/serv2.jpg",
+      },
+      { title: "DevOps as a Service", link: "/", image: "/serv3.jpg" },
+      { title: "CI/CD Implementation", link: "/", image: "/serv4.jpg" },
+      {
+        title: "Infrastructure as Code (IaC)",
+        link: "/",
+        image: "/serv5.jpg",
+      },
     ],
   },
 ];
@@ -25,7 +45,7 @@ export const OurServices = [
 const Services = () => {
   return (
     <div className="relative bg-slate-200 w-screen min-h-screen">
-      <div className="bg-bgImage3 bg-cover bg-no-repeat bg-center lg:min-h-[85vh] min-h-[70vh] w-screen"></div>
+      <div className="bg-cover bg-bgImage3 object-cover bg-no-repeat bg-center lg:min-h-[85vh] min-h-[70vh] w-screen"></div>
 
       <div className="lg:pt-[40px] text-center pt-[30px]">
         <h1 className="pb-2 lg:pb-8 font-nunito lg:text-4xl text-xl font-bold">
@@ -44,7 +64,7 @@ const Services = () => {
           {OurServices[0].serviceList.map((service, index) => (
             <div key={index} className="relative group">
               <img
-                src={""}
+                src={service.image}
                 alt={service.title}
                 className="w-full h-40 object-cover rounded-lg group-hover:opacity-80 transition"
               />
@@ -58,7 +78,7 @@ const Services = () => {
           {OurServices[1].SpecializedServiceList.map((service, index) => (
             <div key={index} className="relative group">
               <img
-                src={""}
+                src={service.image}
                 alt={service.title}
                 className="w-full h-40 object-cover rounded-lg group-hover:opacity-80 transition"
               />

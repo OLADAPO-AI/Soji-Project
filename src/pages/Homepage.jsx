@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoSlider from "../component/slider";
 import Footer from "../component/Footer";
+import { OurServices } from "./servicesPage";
 
 const Homepage = () => {
   return (
@@ -60,7 +61,38 @@ const Homepage = () => {
             </p>
           </div>
           {/* services card */}
-          <div></div>
+          <div className="container mx-auto px-4 py-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {OurServices[0].serviceList.map((service, index) => (
+                <div key={index} className="relative group">
+                  <img
+                    src={""}
+                    alt={service.title}
+                    className="w-full h-40 object-cover rounded-lg group-hover:opacity-80 transition"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <h3 className="text-white text-lg font-semibold">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+              {OurServices[1].SpecializedServiceList.map((service, index) => (
+                <div key={index} className="relative group">
+                  <img
+                    src={""}
+                    alt={service.title}
+                    className="w-full h-52 object-cover rounded-lg group-hover:opacity-80 transition"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <h3 className="text-white text-lg font-semibold">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

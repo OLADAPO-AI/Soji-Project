@@ -7,7 +7,7 @@ export default {
       backgroundImage: {
         "hero-bg": "url('/heroo.gif')",
         bgImage2: "url('/src/assets/bg7.jpg')",
-        bgImage3: "url('/src/assets/bg8.jpg')",
+        bgImage3: "url('/serv2.jpg')",
         bgImage4: "url('/src/assets/bg9.jpg')",
         bgImage5: "url('/src/assets/bg10.jpg')",
         bgImage6: "url('/src/assets/bg11.jpg')",

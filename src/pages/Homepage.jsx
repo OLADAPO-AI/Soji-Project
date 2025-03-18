@@ -109,13 +109,13 @@ const Homepage = () => {
         blog
       </section>
       {/* Testimonial and Gett to know section */}
-      <section className="h-auto bg-white  w-screen rounded-[40px] overflow-hidden">
+      <section className="h-auto bg-black/50 text-white  w-screen rounded-[40px] overflow-hidden">
         <div className="rounded-2xl">
           <div className="flex flex-col justify-between align-middle gap-4 lg:pt-16 pt-10">
             <h2 className="text-4xl text-start lg:text-5xl font-bold leading-tight lg:col-span-3 px-8">
               Testimonials and reviews
             </h2>
-            <div className="h-auto pt-4 w-full flex flex-col lg:flex-row gap-4 justify-center items-center lg:gap-8 lg:justify-between lg:items-start">
+            <div className="h-auto pt-2 w-full flex flex-col lg:flex-row gap-4 justify-center items-center lg:gap-8 lg:justify-between lg:items-start">
               {/* Slider Container */}
               <div className="w-screen ">
                 <TestimonilaGrid />

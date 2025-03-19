@@ -5,6 +5,7 @@ import Footer from '../component/Footer'
 import TestimonilaGrid from '../component/TestimonialGrid'
 import { ImAirplane } from 'react-icons/im'
 import ImpressionCard from '../component/impressionCard'
+import { OurServices } from './servicesPage' // Importing the services data
 const Homepage = () => {
   return (
     <div>

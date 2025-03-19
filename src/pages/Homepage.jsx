@@ -7,6 +7,7 @@ import ImpressionCard from "../component/impressionCard";
 import { OurServices } from "./servicesPage";
 import InsightsSection from "../component/insightSection.jsx";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import FAQSection from "../component/faq.jsx";
 
 const Homepage = () => {
   return (
@@ -57,11 +58,12 @@ const Homepage = () => {
               Software development services
             </h2>
             <p className="lg:col-span-2 font-semibold text-slate-500 leading-normal">
-              At Timspark, we provide comprehensive software development
-              services designed to empower businesses across industries. Whether
-              you need to fill skill gaps, meet deadlines, or scale operations,
-              we offer tailored solutions to transform your digital capabilities
-              and achieve your business goals.
+              At Joroservices, we provide end-to-end IT and digital services
+              designed to drive innovation and efficiency across industries.
+              Whether you need expert support to bridge skill gaps, accelerate
+              project timelines, or scale your digital operations, we deliver
+              tailored solutions to enhance your technological capabilities and
+              achieve your business objectives.
             </p>
           </div>
           {/* services card */}
@@ -95,17 +97,17 @@ const Homepage = () => {
                   </div>
                 </div>
               ))}
-              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-purple-700 via-purple-300 to-purple-500 backdrop-blur-xl rounded-3xl bg-gradient-to-bl flex flex-col px-4">
-                <h3 className="text-center mt-8 sm:text-3xl lg:text-4xl text-2xl font-bold">
+              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-purple-300 via-purple-700 to-purple-300 backdrop-blur-xl rounded-3xl relative bg-gradient-to-bl flex flex-col px-4">
+                <h3 className="text-center text-white mt-8 sm:text-3xl lg:text-4xl text-2xl font-bold">
                   Innovative Digital Agency
                 </h3>
-                <p className=" text-slate-600 text-center lg:text-base text-sm pt-2">
+                <p className=" text-white/80 text-center lg:text-base text-sm pt-2">
                   Offering insights and guidance to refine and elevate your
                   digital products
                 </p>
                 <Link
                   to={"/getintouch"}
-                  className="bg-white w-full rounded-2xl shadow-lg py-3 mt-6 shadow-black/70 hover:bg-white/70 text-black text-center text-xl px-4 font-bold items-center relative flex flex-row justify-center"
+                  className="bg-white rounded-2xl shadow-lg py-3 lg:mt-6 shadow-black/70 hover:bg-white/70 text-black text-center text-xl px-4 font-bold items-center w-[95%] flex-row absolute bottom-4 justify-center"
                 >
                   <span>Free Consulting 30 min</span>
                 </Link>
@@ -125,6 +127,7 @@ const Homepage = () => {
       <section className=" min-h-screen  w-screen text-neutral-50">
         blog
       </section>  */}
+
       {/* Testimonial and Gett to know section */}
       <section className="h-auto bg-slate-900 pb-20  w-screen rounded-[40px] overflow-hidden">
         <div className="rounded-2xl">
@@ -146,6 +149,10 @@ const Homepage = () => {
       </section>
       {/* latest insigth */}
       <InsightsSection />
+
+      {/* Faq section */}
+      <FAQSection />
+
       {/* footer */}
       <Footer />
     </div>

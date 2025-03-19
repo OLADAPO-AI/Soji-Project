@@ -1,14 +1,14 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Navbar from './component/navbar'
-import Homepage from './pages/Homepage'
-import Services from './pages/servicesPage'
-import DevelopmentPage from './pages/developmentPage'
-import CareersPage from './pages/careersPage'
-import Blogpage from './pages/blogPage'
-import WhyjoroPage from './pages/whyjoroPage'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./component/navbar";
+import Homepage from "./pages/Homepage";
+import Services from "./pages/servicesPage";
+import DevelopmentPage from "./pages/developmentPage";
+import CareersPage from "./pages/careersPage";
+import Blogpage from "./pages/blogPage";
+import WhyjoroPage from "./pages/whyjoroPage";
 
-import Contact from './pages/contactPage'
+import Contact from "./pages/contactPage";
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
         </Routes>
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

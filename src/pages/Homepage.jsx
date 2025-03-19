@@ -5,7 +5,6 @@ import Footer from '../component/Footer'
 import TestimonilaGrid from '../component/TestimonialGrid'
 import { ImAirplane } from 'react-icons/im'
 import ImpressionCard from '../component/impressionCard'
-import { OurServices } from './servicesPage' // Importing the services data
 const Homepage = () => {
   return (
     <div>
@@ -70,7 +69,7 @@ const Homepage = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-40 object-cover rounded-lg group-hover:opacity-80 transition"
+                    className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                     <h3 className="text-white text-lg font-semibold">
@@ -84,7 +83,7 @@ const Homepage = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-52 object-cover rounded-lg group-hover:opacity-80 transition"
+                    className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                     <h3 className="text-white text-lg font-semibold">
@@ -93,6 +92,17 @@ const Homepage = () => {
                   </div>
                 </div>
               ))}
+              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-secondary via-accent to-secondary backdrop-blur-xl rounded-3xl bg-gradient-to-bl flex flex-col px-4">
+                <h3 className="text-center mt-8 sm:text-3xl lg:text-4xl text-2xl font-bold">
+                  Need a technical solution?
+                </h3>
+                <Link
+                  to={'/getintouch'}
+                  className="bg-black/60 w-full rounded-2xl shadow-lg py-3 mt-12 shadow-black/70 hover:bg-black/50 hover:text-white/80 text-center text-xl font-bold"
+                >
+                  Reach out
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -102,20 +112,22 @@ const Homepage = () => {
       <div className=" min-h-screen w-screen text-neutral-50">
         featured post
       </div>
+      {/* portfolio */}
       <section className=" min-h-screen w-screen text-neutral-50">
         portfolio{' '}
       </section>
+      {/* blog */}
       <section className=" min-h-screen  w-screen text-neutral-50">
         blog
       </section>
       {/* Testimonial and Gett to know section */}
-      <section className="h-auto bg-white  w-screen rounded-[40px] overflow-hidden">
+      <section className="h-auto bg-black/50 text-white  w-screen rounded-[40px] overflow-hidden">
         <div className="rounded-2xl">
           <div className="flex flex-col justify-between align-middle gap-4 lg:pt-16 pt-10">
             <h2 className="text-4xl text-start lg:text-5xl font-bold leading-tight lg:col-span-3 px-8">
               Testimonials and reviews
             </h2>
-            <div className="h-auto pt-4 w-full flex flex-col lg:flex-row gap-4 justify-center items-center lg:gap-8 lg:justify-between lg:items-start">
+            <div className="h-auto pt-2 w-full flex flex-col lg:flex-row gap-4 justify-center items-center lg:gap-8 lg:justify-between lg:items-start">
               {/* Slider Container */}
               <div className="w-screen ">
                 <TestimonilaGrid />
@@ -127,6 +139,65 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+      {/* latest insigth */}
+      <section className="min-h-screen bg-white/90 rounded-t-3xl py-20 lg:px-20 px-6 sm:px-10">
+        <div className="flex flex-col divide-y-[1px] divide-gray-300 w-full">
+          <div className="pb-8">
+            <div className="flex text-secondary items-center flex-row gap-4 text-sm font-semibold">
+              <FaDotCircle />
+              <span className="uppercase text-gray-500">Featured News</span>
+            </div>
+            <div className="pt-4 font-bold text-3xl capitalize">
+              latest news and insights
+            </div>
+          </div>
+
+          {insightData.map((data, i) => {
+            return (
+              <Link
+                key={i}
+                to={data.link}
+                className="grid lg:gap-20 md:gap-10 gap-2 py-8 grid-cols-1 md:grid-cols-5"
+              >
+                <div className="md:col-span-2 ">
+                  <img
+                    src={data.image}
+                    className="h-[200px] rounded-xl w-full lg:w-4/5"
+                  />
+                </div>
+                <div className="md:col-span-3 py-2 relative ">
+                  {data.category && (
+                    <div className="flex text-secondary items-center flex-row md:py-3 gap-4 text-sm font-semibold">
+                      <FaDotCircle />
+                      <span className="uppercase text-gray-500">
+                        {data.category}
+                      </span>
+                    </div>
+                  )}
+                  <h2 className="md:pt-4 pb-2 hover:underline text-base lg:text-lg font-semibold tracking-wider font-sans">
+                    {data.title}
+                  </h2>
+                  <div className="flex md:pt-10 mt-auto flex-row ">
+                    <img
+                      src={data.authorImg}
+                      alt={data.author}
+                      className="w-12 h-12 mr-4 rounded-full "
+                    />
+                    <p className="rounded-xl  bg-white text-center px-4 my-auto py-1 ml-2 text-gray-500 text-sm">
+                      {data.author}
+                    </p>
+                    <p className="rounded-xl  bg-white text-center px-4 my-auto py-1 ml-2 text-gray-500 text-sm">
+                      {data.datePosted}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* footer */}
       <Footer />
     </div>
   )

@@ -95,7 +95,7 @@ const Homepage = () => {
                   </div>
                 </div>
               ))}
-              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-secondary via-accent to-secondary backdrop-blur-xl rounded-3xl bg-gradient-to-bl flex flex-col px-4">
+              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-purple-700 via-purple-300 to-purple-500 backdrop-blur-xl rounded-3xl bg-gradient-to-bl flex flex-col px-4">
                 <h3 className="text-center mt-8 sm:text-3xl lg:text-4xl text-2xl font-bold">
                   Innovative Digital Agency
                 </h3>

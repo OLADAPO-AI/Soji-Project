@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const TestimonialCard = ({ testimonial }) => {
   return (
@@ -8,7 +8,7 @@ const TestimonialCard = ({ testimonial }) => {
           "{testimonial.quote}"
         </p>
       </div>
-      <div className="bg-white/50 h-[100px] backdrop-blur-sm px-6 py-4">
+      <div className="h-[100px] px-6 py-4">
         <div className="flex items-center">
           <img
             className="w-14 h-14 rounded-full mr-4 border-2 border-white/30"
@@ -16,17 +16,17 @@ const TestimonialCard = ({ testimonial }) => {
             alt={testimonial.name}
           />
           <div>
-            <h2 className="text-lg lg:text-xl font-semibold text-gray-800">
+            <h2 className="text-lg lg:text-xl font-semibold text-white">
               {testimonial.name}
             </h2>
-            <p className="text-base lg:text-lg text-gray-700">
+            <p className="text-base lg:text-lg text-white">
               {testimonial.role}
             </p>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TestimonialCard;
+export default TestimonialCard

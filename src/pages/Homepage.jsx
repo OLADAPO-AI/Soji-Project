@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import LogoSlider from "../component/slider";
 import Footer from "../component/Footer";
 import TestimonilaGrid from "../component/TestimonialGrid";
-import { ImAirplane } from "react-icons/im";
 import ImpressionCard from "../component/impressionCard";
 import { OurServices } from "./servicesPage";
-import { FaDotCircle } from "react-icons/fa";
 import InsightsSection from "../component/insightSection.jsx";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 const Homepage = () => {
   return (
     <div>
@@ -97,13 +97,17 @@ const Homepage = () => {
               ))}
               <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-secondary via-accent to-secondary backdrop-blur-xl rounded-3xl bg-gradient-to-bl flex flex-col px-4">
                 <h3 className="text-center mt-8 sm:text-3xl lg:text-4xl text-2xl font-bold">
-                  Need a technical solution?
+                  Innovative Digital Agency
                 </h3>
+                <p className=" text-slate-600 text-center lg:text-base text-sm pt-2">
+                  Offering insights and guidance to refine and elevate your
+                  digital products
+                </p>
                 <Link
                   to={"/getintouch"}
-                  className="bg-black/30 w-full rounded-2xl shadow-lg py-3 mt-12 shadow-black/70 hover:bg-black/50 text-white/80 text-center text-xl font-bold"
+                  className="bg-white w-full rounded-2xl shadow-lg py-3 mt-6 shadow-black/70 hover:bg-white/70 text-black text-center text-xl px-4 font-bold items-center relative flex flex-row justify-center"
                 >
-                  Reach out
+                  <span>Free Consulting 30 min</span>
                 </Link>
               </div>
             </div>

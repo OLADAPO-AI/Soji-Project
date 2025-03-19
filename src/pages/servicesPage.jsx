@@ -4,39 +4,39 @@ import Footer from "../component/Footer";
 export const OurServices = [
   {
     serviceList: [
-      { title: "Custom Software Development", link: "/", image: "/serv1.jpg" },
+      { title: "Custom Software Development", link: "/", image: "/serv8.webp" },
       {
         title: "Web & Mobile App Development",
         link: "/",
-        image: "/serv2.jpg",
+        image: "/serv2.webp",
       },
-      { title: "Cloud Solutions & Migration", link: "/", image: "/serv3.jpg" },
+      { title: "Cloud Solutions & Migration", link: "/", image: "/serv3.webp" },
       {
         title: "Enterprise Software Development",
         link: "/",
-        image: "/serv4.jpg",
+        image: "/serv4.webp",
       },
       {
         title: "Cloud Automation & Monitoring",
         link: "/",
-        image: "/serv5.jpg",
+        image: "/serv5.webp",
       },
     ],
   },
   {
     SpecializedServiceList: [
-      { title: "Digital Marketing", link: "/", image: "/serv1.jpg" },
+      { title: "Digital Marketing", link: "/", image: "/serv6.webp" },
       {
         title: "IT Infrastructure Management",
         link: "/",
-        image: "/serv2.jpg",
+        image: "/serv2.webp",
       },
-      { title: "DevOps as a Service", link: "/", image: "/serv3.jpg" },
-      { title: "CI/CD Implementation", link: "/", image: "/serv4.jpg" },
+      { title: "DevOps as a Service", link: "/", image: "/serv3.webp" },
+      { title: "CI/CD Implementation", link: "/", image: "/serv4.webp" },
       {
         title: "Infrastructure as Code (IaC)",
         link: "/",
-        image: "/serv5.jpg",
+        image: "/serv5.webp",
       },
     ],
   },

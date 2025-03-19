@@ -1,25 +1,25 @@
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const LogoSlider = () => {
   const logos = [
-    '/logo1/jpeg',
-    '/logo2.jpeg',
-    '/logo3.jpeg',
-    '/logo4.jpeg',
-    '/logo5.jpeg',
-    '/logo6.jpeg',
-    '/logo7.jpeg',
-    '/logo8.jpeg',
-    '/logo9.jpeg',
-    '/logo10.jpeg',
-    '/logo11.jpeg',
-    '/logo12.jpeg',
-    '/logo13.jpeg',
-    '/logo14.jpeg',
-    '/logo15.jpeg',
-  ]
+    "/logo1/webp",
+    "/logo2.webp",
+    "/logo3.webp",
+    "/logo4.webp",
+    "/logo5.webp",
+    "/logo6.webp",
+    "/logo7.webp",
+    "/logo8.webp",
+    "/logo9.webp",
+    "/logo10.webp",
+    "/logo11.webp",
+    "/logo12.webp",
+    "/logo13.webp",
+    "/logo14.webp",
+    "/logo15.webp",
+  ];
 
   const settings = {
     infinite: true, // Loop infinitely
@@ -28,9 +28,9 @@ const LogoSlider = () => {
     slidesToScroll: 1, // Number of slides to scroll at a time
     autoplay: true, // Enables auto-sliding
     autoplaySpeed: 2000, // Time per slide (in ms)
-    cssEase: 'linear',
+    cssEase: "linear",
     pauseOnHover: false, // Keeps sliding even on hover
-  }
+  };
 
   return (
     <div className="w-full absolute bottom-0 bg-none py-6">
@@ -42,7 +42,7 @@ const LogoSlider = () => {
         ))}
       </Slider>
     </div>
-  )
-}
+  );
+};
 
-export default LogoSlider
+export default LogoSlider;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const TestimonialCard = ({ testimonial }) => {
   return (
@@ -26,7 +26,7 @@ const TestimonialCard = ({ testimonial }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TestimonialCard
+export default TestimonialCard;

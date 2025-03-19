@@ -51,7 +51,7 @@ const Homepage = () => {
 
       {/* services section */}
       <div className="min-h-screen w-screen bg-[#f1f1f1]">
-        <div className="px-4 lg:pt-24 w-4/5 mx-auto pt-10 ">
+        <div className="px-4 lg:pt-24 lg:w-4/5 mx-auto pt-10 ">
           <div className="grid lg:grid-cols-5 col-span-1 gap-4">
             <h2 className="text-4xl  text-slate-900 lg:text-5xl font-bold leading-tight lg:col-span-3">
               Software development services

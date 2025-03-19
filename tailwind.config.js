@@ -6,11 +6,11 @@ export default {
     extend: {
       backgroundImage: {
         "hero-bg": "url('/heroo.gif')",
-        bgImage2: "url('/bg7.jpg')",
-        bgImage3: "url('/serv2.jpg')",
-        bgImage4: "url('/bg9.jpg')",
-        bgImage5: "url('/bg10.jpg')",
-        bgImage6: "url('/bg11.jpg')",
+        bgImage2: "url('/bg7.webp')",
+        bgImage3: "url('/serv2.webp')",
+        bgImage4: "url('/bg9.webp')",
+        bgImage5: "url('/bg10.webp')",
+        bgImage6: "url('/bg11.webp')",
         //   'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
       },
       fontFamily: {

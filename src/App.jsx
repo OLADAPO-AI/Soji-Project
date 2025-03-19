@@ -9,6 +9,7 @@ import Blogpage from "./pages/blogPage";
 import WhyjoroPage from "./pages/whyjoroPage";
 
 import Contact from "./pages/contactPage";
+import UnderDevelopment from "./pages/under-development";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/blog" element={<Blogpage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/getintouch" element={<Contact />} />
+          <Route path="*" element={<UnderDevelopment />} />
         </Routes>
       </div>
     </BrowserRouter>

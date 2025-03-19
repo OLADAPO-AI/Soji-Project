@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import LogoSlider from '../component/slider'
-import Footer from '../component/Footer'
-import TestimonilaGrid from '../component/TestimonialGrid'
-import { ImAirplane } from 'react-icons/im'
-import ImpressionCard from '../component/impressionCard'
-import { OurServices } from './servicesPage'
-import { FaDotCircle } from 'react-icons/fa'
-import { insightData } from '../data.js'
+import React from "react";
+import { Link } from "react-router-dom";
+import LogoSlider from "../component/slider";
+import Footer from "../component/Footer";
+import TestimonilaGrid from "../component/TestimonialGrid";
+import { ImAirplane } from "react-icons/im";
+import ImpressionCard from "../component/impressionCard";
+import { OurServices } from "./servicesPage";
+import { FaDotCircle } from "react-icons/fa";
+import InsightsSection from "../component/insightSection.jsx";
 const Homepage = () => {
   return (
     <div>
@@ -38,7 +38,7 @@ const Homepage = () => {
               innovation and efficiency
             </p>
             <div className="flex justify-center gap-4 flex-col sm:flex-row">
-              <Link to={'/getintouch'}>
+              <Link to={"/getintouch"}>
                 <div className="text-lg lg:text-xl px-9 py-4  before:bg-accent hover:bg-accent-dark  p-3 rounded-xl bg-accent text-white transition duration-300 ease-in-out font-semibold disabled:opacity-50 disabled:cursor-not-allowed">
                   Get a consultation
                 </div>
@@ -74,7 +74,7 @@ const Homepage = () => {
                     alt={service.title}
                     className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                  <div className="absolute inset-0 bg-accent/40 flex items-center justify-center rounded-3xl opacity-0 group-hover:opacity-100 transition">
                     <h3 className="text-white text-lg font-semibold">
                       {service.title}
                     </h3>
@@ -88,7 +88,7 @@ const Homepage = () => {
                     alt={service.title}
                     className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                  <div className="absolute inset-0 bg-accent/40 flex items-center justify-center opacity-0 group-hover:opacity-100 rounded-3xl transition">
                     <h3 className="text-white text-lg font-semibold">
                       {service.title}
                     </h3>
@@ -100,8 +100,8 @@ const Homepage = () => {
                   Need a technical solution?
                 </h3>
                 <Link
-                  to={'/getintouch'}
-                  className="bg-black/60 w-full rounded-2xl shadow-lg py-3 mt-12 shadow-black/70 hover:bg-black/50 hover:text-white/80 text-center text-xl font-bold"
+                  to={"/getintouch"}
+                  className="bg-black/30 w-full rounded-2xl shadow-lg py-3 mt-12 shadow-black/70 hover:bg-black/50 text-white/80 text-center text-xl font-bold"
                 >
                   Reach out
                 </Link>
@@ -122,7 +122,7 @@ const Homepage = () => {
         blog
       </section>  */}
       {/* Testimonial and Gett to know section */}
-      <section className="h-auto bg-slate-900  w-screen rounded-[40px] overflow-hidden">
+      <section className="h-auto bg-slate-900 pb-20  w-screen rounded-[40px] overflow-hidden">
         <div className="rounded-2xl">
           <div className="flex flex-col justify-between align-middle gap-4 lg:pt-16 pt-10">
             <h2 className="text-4xl mx-auto text-white text-start lg:text-5xl font-bold leading-tight lg:col-span-3 px-8">
@@ -141,67 +141,11 @@ const Homepage = () => {
         </div>
       </section>
       {/* latest insigth */}
-      <section className="min-h-screen bg-white/90 rounded-t-3xl py-20 lg:px-20 px-6 sm:px-10">
-        <div className="flex flex-col divide-y-[1px] divide-gray-300 w-full">
-          <div className="pb-8">
-            <div className="flex text-secondary items-center flex-row gap-4 text-sm font-semibold">
-              <FaDotCircle />
-              <span className="uppercase text-gray-500">Featured News</span>
-            </div>
-            <div className="pt-4 font-bold text-3xl capitalize">
-              latest news and insights
-            </div>
-          </div>
-
-          {insightData.map((data, i) => {
-            return (
-              <Link
-                key={i}
-                to={data.link}
-                className="grid lg:gap-20 md:gap-10 gap-2 py-8 grid-cols-1 md:grid-cols-5"
-              >
-                <div className="md:col-span-2 ">
-                  <img
-                    src={data.image}
-                    className="h-[200px] rounded-xl w-full lg:w-4/5"
-                  />
-                </div>
-                <div className="md:col-span-3 py-2 relative ">
-                  {data.category && (
-                    <div className="flex text-secondary items-center flex-row md:py-3 gap-4 text-sm font-semibold">
-                      <FaDotCircle />
-                      <span className="uppercase text-gray-500">
-                        {data.category}
-                      </span>
-                    </div>
-                  )}
-                  <h2 className="md:pt-4 pb-2 hover:underline text-base lg:text-lg font-semibold tracking-wider font-sans">
-                    {data.title}
-                  </h2>
-                  <div className="flex md:pt-10 mt-auto flex-row ">
-                    <img
-                      src={data.authorImg}
-                      alt={data.author}
-                      className="w-12 h-12 mr-4 rounded-full "
-                    />
-                    <p className="rounded-xl  bg-white text-center px-4 my-auto py-1 ml-2 text-gray-500 text-sm">
-                      {data.author}
-                    </p>
-                    <p className="rounded-xl  bg-white text-center px-4 my-auto py-1 ml-2 text-gray-500 text-sm">
-                      {data.datePosted}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-      </section>
-
+      <InsightsSection />
       {/* footer */}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

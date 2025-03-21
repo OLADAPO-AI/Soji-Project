@@ -96,17 +96,17 @@ const Homepage = () => {
                   </div>
                 </div>
               ))}
-              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 from-purple-300 via-purple-700 to-purple-300 backdrop-blur-xl rounded-3xl relative bg-gradient-to-bl flex flex-col px-4">
-                <h3 className="text-center text-white mt-8 sm:text-3xl lg:text-4xl text-2xl font-bold">
+              <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 bg-[#46868f] backdrop-blur-xl rounded-3xl relative bg-gradient-to-bl flex justify-center flex-col px-4">
+                <h3 className="text-center text-white sm:text-3xl lg:text-4xl text-lg leading-tight font-bold">
                   Innovative Digital Agency
                 </h3>
-                <p className=" text-white/80 text-center lg:text-base text-sm pt-2">
+                <p className=" text-white/80 text-center lg:text-base text-sm pt-2 pb-2 lg:pb-4">
                   Offering insights and guidance to refine and elevate your
                   digital products
                 </p>
                 <Link
                   to={"/getintouch"}
-                  className="bg-accent rounded-2xl shadow-lg py-2 lg:py-3 lg:mt-4 shadow-black/70 hover:bg-accent-dark duration-200 text-white text-center text-xl px-4 font-bold items-center w-full flex-row  justify-center md:mt-8 mt-2"
+                  className="bg-accent rounded-2xl shadow-md py-2 lg:py-3 lg:mt-4 shadow-white hover:bg-accent-dark duration-200 ring-offset-2 ring-cya-500 ring-1 text-white text-center text-base lg:text-xl px-4 font-bold items-center w-full flex-row  justify-center md:mt-8  mt-2"
                 >
                   <span>Free Consulting 30 min</span>
                 </Link>

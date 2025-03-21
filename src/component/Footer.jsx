@@ -18,7 +18,7 @@ const Footer = () => {
             <span className="sr-only">Select a language</span>
             <select className="w-full p-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
               <option>English</option>
-              <option>Tamil</option>
+              <option>French</option>
             </select>
           </label>
         </div>
@@ -147,7 +147,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="w-full p-2 text-sm font-medium text-white bg-accent rounded-md hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 text-sm font-medium text-whitebefore:bg-accent hover:bg-accent-dark rounded-xl bg-accent text-white transition duration-300 ease-in-out  disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-primary"
             >
               Subscribe
             </button>

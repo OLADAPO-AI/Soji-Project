@@ -46,10 +46,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={` z-50  flex justify-between py-2  items-center  rounded-md fixed top-0 p-4 w-full bg-transparent text-white px-2 transition-all duration-300`}
+      className={` z-50   flex justify-between py-2  items-center  rounded-md fixed top-0  w-full bg-transparent text-white   transition-all duration-300`}
     >
       <div
-        className={`${getNavbarBg()} shadow-sm shadow-accent/40 flex justify-between py-2 h-[50px] items-center backdrop-blur-md lg:h-16 rounded-md  top-4 mx-auto left-4 w-full  text-white px-2 transition-all duration-300`}
+        className={`${getNavbarBg()} shadow-sm z-50 shadow-accent/40 flex justify-between py-2 h-[50px] items-center backdrop-blur-md lg:h-16 rounded-md  top-4 mx-4 w-full  text-white transition-all duration-300`}
       >
         <Logo />
         <NavLink />
@@ -66,13 +66,9 @@ const Navbar = () => {
         >
           {openNav ? <X size={24} color="white" /> : <Menu size={24} />}
         </button>
-
-        {/* Mobile Navbar */}
-        <MobileNavbar
-          isOpen={openNav}
-          toggleMenu={() => setOpenNav(!openNav)}
-        />
-      </div>
+      </div>{" "}
+      {/* Mobile Navbar */}
+      <MobileNavbar isOpen={openNav} toggleMenu={() => setOpenNav(!openNav)} />
     </div>
   );
 };

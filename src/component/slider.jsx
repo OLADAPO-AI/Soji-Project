@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const LogoSlider = () => {
   const logos = [
-    "/logo1/webp",
+    "/logo1.webp",
     "/logo2.webp",
     "/logo3.webp",
     "/logo4.webp",

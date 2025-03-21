@@ -6,7 +6,6 @@ import TestimonilaGrid from "../component/TestimonialGrid";
 import ImpressionCard from "../component/impressionCard";
 import { OurServices } from "./servicesPage";
 import InsightsSection from "../component/insightSection.jsx";
-import { MdOutlineArrowOutward } from "react-icons/md";
 import FAQSection from "../component/faq.jsx";
 
 const Homepage = () => {
@@ -107,7 +106,7 @@ const Homepage = () => {
                 </p>
                 <Link
                   to={"/getintouch"}
-                  className="bg-white rounded-2xl shadow-lg py-3 lg:mt-6 shadow-black/70 hover:bg-white/70 text-black text-center text-xl px-4 font-bold items-center w-[95%] flex-row absolute bottom-4 justify-center"
+                  className="bg-accent rounded-2xl shadow-lg py-2 lg:py-3 lg:mt-4 shadow-black/70 hover:bg-accent-dark duration-200 text-white text-center text-xl px-4 font-bold items-center w-full flex-row  justify-center md:mt-8 mt-2"
                 >
                   <span>Free Consulting 30 min</span>
                 </Link>
@@ -116,17 +115,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      {/* <div className=" min-h-screen w-screen text-neutral-50">
-        featured post
-      </div>
-     
-      <section className=" min-h-screen w-screen text-neutral-50">
-        portfolio{' '}
-      </section>
-     
-      <section className=" min-h-screen  w-screen text-neutral-50">
-        blog
-      </section>  */}
 
       {/* Testimonial and Gett to know section */}
       <section className="h-auto bg-slate-900 pb-20  w-screen rounded-[40px] overflow-hidden">

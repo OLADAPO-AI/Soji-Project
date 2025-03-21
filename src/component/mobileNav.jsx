@@ -4,18 +4,19 @@ import { ArrowUpRight } from "lucide-react";
 import Logo from "./logo";
 import { LinkInfo } from "./links";
 import { Link } from "react-router-dom";
+import Button from "./button";
 
 const MobileNavbar = ({ isOpen, toggleMenu }) => {
   return (
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: isOpen ? "100%" : 0 }}
-      className={`fixed top-0 left-0 w-full mt-[60px] bg-bgImage2 backdrop-blur-sm bg-cover text-white overflow-hidden transition-all duration-300 ${
+      className={`fixed -top-20 w-[100vw] mt-[60px] bg-bgImage2  backdrop-blur-sm bg-cover text-white overflow-hidden transition-all duration-300 ${
         isOpen ? "h-screen" : "h-0"
       }`}
     >
       {/* Menu List */}
-      <ul className="flex flex-col items-center mt-20 space-y-3">
+      <ul className="flex flex-col items-center mt-28 space-y-3">
         {LinkInfo.map((item, index) => (
           <li key={index} className="w-full text-center">
             <Link
@@ -27,7 +28,7 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
               <ArrowUpRight size={20} />
             </Link>
           </li>
-        ))}
+        ))}{" "}
       </ul>
     </motion.div>
   );

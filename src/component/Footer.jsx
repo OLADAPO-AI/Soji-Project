@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,31 +31,31 @@ const Footer = () => {
           <div className="space-y-2">
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Features
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Integrations
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Documentation
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               FAQs
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Pricing
             </Link>
@@ -70,25 +70,25 @@ const Footer = () => {
           <div className="space-y-2">
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Press-Kit
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Company
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Privacy
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Blog
             </Link>
@@ -103,31 +103,31 @@ const Footer = () => {
           <div className="space-y-2">
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Twitter
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Instagram
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Email
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Advertising
             </Link>
             <Link
               to="#"
-              className="block text-sm text-gray-300 hover:text-primary"
+              className="block text-sm text-gray-300 hover:text-accent"
             >
               Chat
             </Link>
@@ -147,7 +147,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="w-full p-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 text-sm font-medium text-white bg-accent rounded-md hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-primary"
             >
               Subscribe
             </button>
@@ -161,19 +161,19 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="flex flex-col items-center justify-between pt-8 mt-8 border-t border-gray-800 md:flex-row">
         <p className="mb-4 text-sm text-gray-400 md:mb-0">
-          © Copyright 2020 Joro Services. All Rights Reserved.
+          © Copyright 2025 Joro Services. All Rights Reserved.
         </p>
         <div className="flex space-x-4">
-          <Link to="#" className="text-sm text-gray-400 hover:text-primary">
+          <Link to="#" className="text-sm text-gray-400 hover:text-accent">
             Terms
           </Link>
-          <Link to="#" className="text-sm text-gray-400 hover:text-primary">
+          <Link to="#" className="text-sm text-gray-400 hover:text-accent">
             Privacy
           </Link>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

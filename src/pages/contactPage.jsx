@@ -1,13 +1,13 @@
-import React from "react";
-import CardGrid from "../component/CardGrid";
-import Footer from "../component/Footer";
-import LinkBtn from "../component/socialLinkBtn";
+import React from 'react'
+import CardGrid from '../component/CardGrid'
+import Footer from '../component/Footer'
+import LinkBtn from '../component/socialLinkBtn'
 const Contact = () => {
   return (
     <main className=" bg-gray-100 flex flex-col items-center justify-center pt-40 min-h-screen w-screen text-gray-900">
       <div className="container">
         {/* First Section */}
-        <section className="mb-12">
+        <section className="mb-12 ">
           <div className="flex flex-col lg:flex-row gap-6">
             {/* First Row */}
             <div className="flex  flex-col justify-between gap-1 w-full lg:w-1/2">
@@ -26,7 +26,7 @@ const Contact = () => {
                     General Enquiries
                   </h6>
                   <p className="text-lg underline text-white mb-2">
-                    bighead@gmail.com{" "}
+                    bighead@gmail.com{' '}
                   </p>
                 </div>
                 <div>
@@ -34,7 +34,7 @@ const Contact = () => {
                     Support Enquiries
                   </h6>
                   <p className="text-lg underline text-white mb-2">
-                    bighead@gmail.com{" "}
+                    bighead@gmail.com{' '}
                   </p>
                 </div>
                 <div>
@@ -42,7 +42,7 @@ const Contact = () => {
                     Interested in joining the team ?
                   </h6>
                   <p className="text-lg underline text-white mb-2">
-                    bighead@gmail.com{" "}
+                    bighead@gmail.com{' '}
                   </p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Contact = () => {
             </div>
 
             {/* Second Row - Optimized Form */}
-            <div className=" p-8 rounded-2xl shadow-lg w-full lg:w-1/2">
+            <div className=" p-8 rounded-2xl shadow-lg w-full lg:w-1/2 ">
               <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
               <form className="space-y-4">
                 <div>
@@ -156,7 +156,7 @@ const Contact = () => {
 
                 <div className="relative">
                   <label className="block font-medium mb-1">
-                    How did you hear about us{" "}
+                    How did you hear about us{' '}
                     <span className="text-red-500">*</span>
                   </label>
                   <div className="relative">
@@ -180,7 +180,7 @@ const Contact = () => {
 
                 <div>
                   <label className="block font-medium mb-1">
-                    Tell us about your project{" "}
+                    Tell us about your project{' '}
                     <span className="text-red-500">*</span>
                   </label>
                   <p className="text-sm text-gray-500 mb-2">
@@ -196,10 +196,10 @@ const Contact = () => {
                 <div className="flex items-start gap-2">
                   <input type="checkbox" required className="mt-1" />
                   <label className="text-sm text-gray-700">
-                    I agree to the{" "}
+                    I agree to the{' '}
                     <a href="#" className="text-blue-600 underline">
                       Privacy Policy
-                    </a>{" "}
+                    </a>{' '}
                     and Data Protection terms.
                   </label>
                 </div>
@@ -215,7 +215,7 @@ const Contact = () => {
         </section>
       </div>
       <div className=" container">
-        <section className=" mb-12">
+        <section className=" mb-12 ">
           <div className="  flex-1 min-w-[200px]">
             <h3 className=" text-5xl mb-8">Find Us</h3>
             <CardGrid />
@@ -230,7 +230,7 @@ const Contact = () => {
         </section>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LogoSlider from "../component/slider";
-import Footer from "../component/Footer";
-import TestimonilaGrid from "../component/TestimonialGrid";
-import ImpressionCard from "../component/impressionCard";
-import { OurServices } from "./servicesPage";
-import InsightsSection from "../component/insightSection.jsx";
-import { MdOutlineArrowOutward } from "react-icons/md";
-import FAQSection from "../component/faq.jsx";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import LogoSlider from '../component/slider'
+import Footer from '../component/Footer'
+import TestimonilaGrid from '../component/TestimonialGrid'
+import ImpressionCard from '../component/impressionCard'
+import { OurServices } from './servicesPage'
+import InsightsSection from '../component/insightSection.jsx'
+import { MdOutlineArrowOutward } from 'react-icons/md'
+import FAQSection from '../component/faq.jsx'
 
 const Homepage = () => {
   return (
@@ -39,7 +39,7 @@ const Homepage = () => {
               innovation and efficiency
             </p>
             <div className="flex justify-center gap-4 flex-col sm:flex-row">
-              <Link to={"/getintouch"}>
+              <Link to={'/getintouch'}>
                 <div className="text-lg lg:text-xl px-9 py-4  before:bg-accent hover:bg-accent-dark  p-3 rounded-xl bg-accent text-white transition duration-300 ease-in-out font-semibold disabled:opacity-50 disabled:cursor-not-allowed">
                   Get a consultation
                 </div>
@@ -106,7 +106,7 @@ const Homepage = () => {
                   digital products
                 </p>
                 <Link
-                  to={"/getintouch"}
+                  to={'/getintouch'}
                   className="bg-white rounded-2xl shadow-lg py-3 lg:mt-6 shadow-black/70 hover:bg-white/70 text-black text-center text-xl px-4 font-bold items-center w-[95%] flex-row absolute bottom-4 justify-center"
                 >
                   <span>Free Consulting 30 min</span>
@@ -156,7 +156,7 @@ const Homepage = () => {
       {/* footer */}
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Homepage;
+export default Homepage

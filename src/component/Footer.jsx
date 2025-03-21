@@ -18,7 +18,7 @@ const Footer = () => {
             <span className="sr-only">Select a language</span>
             <select className="w-full p-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
               <option>English</option>
-              <option>Tamil</option>
+              <option>French</option>
             </select>
           </label>
         </div>
@@ -147,7 +147,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="w-full p-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 text-sm font-medium text-whitebefore:bg-accent hover:bg-accent-dark rounded-xl bg-accent text-white transition duration-300 ease-in-out  disabled:opacity-50 disabled:cursor-not-allowedfocus:outline-none focus:ring-2 focus:ring-primary"
             >
               Subscribe
             </button>
@@ -161,7 +161,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="flex flex-col items-center justify-between pt-8 mt-8 border-t border-gray-800 md:flex-row">
         <p className="mb-4 text-sm text-gray-400 md:mb-0">
-          © Copyright 2020 Joro Services. All Rights Reserved.
+          © Copyright 2025 Joro Services. All Rights Reserved.
         </p>
         <div className="flex space-x-4">
           <Link to="#" className="text-sm text-gray-400 hover:text-primary">

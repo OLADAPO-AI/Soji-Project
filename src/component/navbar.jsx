@@ -55,7 +55,7 @@ const Navbar = () => {
         <NavLink />
         <div className="md:flex hidden justify-center w-[250px]">
           <Link to={"/getintouch"}>
-            <Button bg={""} title={"Get in Touch"} />
+            <Button bg={"black"} title={"Get in Touch"} />
           </Link>
         </div>
 

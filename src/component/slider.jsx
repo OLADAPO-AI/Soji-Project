@@ -30,6 +30,26 @@ const LogoSlider = () => {
     autoplaySpeed: 2000, // Time per slide (in ms)
     cssEase: "linear",
     pauseOnHover: false, // Keeps sliding even on hover
+    responsive: [
+      {
+        breakpoint: 1024, // Tablets and small desktops
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768, // Mobile devices
+        settings: {
+          slidesToShow: 4, // Show 4 slides on mobile
+        },
+      },
+      {
+        breakpoint: 480, // Smaller screens
+        settings: {
+          slidesToShow: 3, // Show 2 slides for very small screens
+        },
+      },
+    ],
   };
 
   return (

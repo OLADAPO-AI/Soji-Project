@@ -10,11 +10,11 @@ import FAQSection from "../component/faq.jsx";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className=" max-w-[100vw] overflow-x-hidden">
       {/* hero page */}
       <div
         id="hero"
-        className="bg-hero-bg bg-cover bg-no-repeat bg-center overflow-hidden min-h-screen w-screen"
+        className="bg-hero-bg bg-cover bg-no-repeat bg-center overflow-hidden min-h-screen w-[100vw]"
       >
         <div className="h-screen bg-black/40 flex flex-col items-center justify-center relative text-white">
           {/* Centered Content Container */}

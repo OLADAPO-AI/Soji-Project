@@ -28,7 +28,7 @@ const App = () => {
   };
   return (
     <BrowserRouter>
-      <div className="bg-background-dark min-h-[screen] w-screen font-nunito">
+      <div className="bg-background-dark min-h-[100vw] w-full font-nunito">
         {isVisible && (
           <button
             onClick={scrollToTop}

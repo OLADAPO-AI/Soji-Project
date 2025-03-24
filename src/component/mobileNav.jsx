@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import Logo from "./logo";
 import { LinkInfo } from "./links";
 import { Link } from "react-router-dom";
 import Button from "./button";
@@ -11,7 +10,7 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: isOpen ? "100%" : 0 }}
-      className={`fixed -top-20 w-[100vw] mt-[60px] bg-bgImage2  backdrop-blur-sm bg-cover text-white overflow-hidden transition-all duration-300 ${
+      className={`fixed -top-20 w-[100vw] mt-[60px] bg-bgImage2  backdrop-blur-sm bg-cover text-white overflow-hidden transition-all duration-300  ${
         isOpen ? "h-screen" : "h-0"
       }`}
     >
@@ -30,6 +29,14 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
           </li>
         ))}{" "}
       </ul>
+      <div className="flex justify-center w-full ">
+        <Link
+          className="bg-accent w-1/2 text-center py-2 rounded-lg hover:bg-accent-dark transition-all duration-300"
+          to={"/getintouch"}
+        >
+          Get in Touch
+        </Link>
+      </div>
     </motion.div>
   );
 };

@@ -29,9 +29,9 @@ const MobileNavbar = ({ isOpen, toggleMenu }) => {
           </li>
         ))}{" "}
       </ul>
-      <div className="flex justify-center w-full ">
+      <div className="flex justify-center w-full px-4">
         <Link
-          className="bg-accent w-1/2 text-center py-2 rounded-lg hover:bg-accent-dark transition-all duration-300"
+          className="bg-accent-dark w-full text-center py-2 rounded-lg hover:bg-accent transition-all duration-300"
           to={"/getintouch"}
         >
           Get in Touch

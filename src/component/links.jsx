@@ -4,11 +4,11 @@ import { ServiceOverlay } from "./navlinkOverlay";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const LinkInfo = [
-  { title: "Services", path: "/services" },
+  { title: "Creative Solutions", path: "/creative-solutions" },
   { title: "Development", path: "/development" },
-  { title: "Why JoroServices", path: "/joroServices" },
+  { title: "Digital Marketing", path: "/digital-marketing" },
+  { title: "Tecnical Services", path: "/technical-services" },
   { title: "Careers", path: "/careers" },
-  { title: "Blog", path: "/blog" },
 ];
 
 const NavLink = () => {
@@ -16,8 +16,8 @@ const NavLink = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(null);
 
   return (
-    <div className="hidden lg:flex items-center w-3/5">
-      <div className="flex flex-row relative mx-auto w-full justify-around tracking-wider px-2 items-center">
+    <div className="hidden lg:flex items-center justify-center w-3/5">
+      <div className="flex flex-row justify-center items-center whitespace-nowrap relative mx-auto w-full  tracking-wider ">
         {LinkInfo.map((link, i) => (
           <div
             key={i}
@@ -29,7 +29,7 @@ const NavLink = () => {
           >
             <Link
               to={link.path}
-              className={`text-[16px] lg:text-[14px] font-semibold relative lg:font-bold hover:bg-neutral-700/70 xl:px-8 lg:px-2 py-2 ${
+              className={`text-[16px] lg:text-[13px] font-semibold relative lg:font-bold hover:bg-neutral-700/70 xl:px-8 lg:px-2 py-2 ${
                 location.pathname === link.path ? "text-accent" : "text-white"
               } group transition-all duration-300`}
             >

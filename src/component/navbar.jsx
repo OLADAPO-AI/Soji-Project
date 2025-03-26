@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         <Logo />
         <NavLink />
-        <div className="md:flex hidden justify-center w-[250px]">
+        <div className="md:flex hidden justify-center w-[150px] mr-4">
           <Link to={"/getintouch"}>
             <Button bg={"black"} title={"Get in Touch"} />
           </Link>

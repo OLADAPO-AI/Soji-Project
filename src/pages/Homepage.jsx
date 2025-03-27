@@ -4,7 +4,7 @@ import LogoSlider from "../component/slider";
 import Footer from "../component/Footer";
 import TestimonilaGrid from "../component/TestimonialGrid";
 import ImpressionCard from "../component/impressionCard";
-import { OurServices } from "./servicesPage";
+import { ServiceList } from "./services";
 import InsightsSection from "../component/insightSection.jsx";
 import FAQSection from "../component/faq.jsx";
 
@@ -68,7 +68,7 @@ const Homepage = () => {
           {/* services card */}
           <div className="container mx-auto px-4 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {OurServices[0].serviceList.map((service, index) => (
+              {ServiceList.map((service, index) => (
                 <div key={index} className="relative group">
                   <img
                     src={service.image}
@@ -82,20 +82,7 @@ const Homepage = () => {
                   </div>
                 </div>
               ))}
-              {OurServices[1].SpecializedServiceList.map((service, index) => (
-                <div key={index} className="relative group">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-52 object-cover rounded-3xl group-hover:opacity-80 transition"
-                  />
-                  <div className="absolute inset-0 bg-accent/40 flex items-center justify-center opacity-0 group-hover:opacity-100 rounded-3xl transition">
-                    <h3 className="text-white text-lg font-semibold">
-                      {service.title}
-                    </h3>
-                  </div>
-                </div>
-              ))}
+
               <div className=" w-full h-52 object-cover group-hover:opacity-80 transition sm:col-span-2 col-span-1 bg-[#46868f] backdrop-blur-xl rounded-3xl relative bg-gradient-to-bl flex justify-center flex-col px-4">
                 <h3 className="text-center text-white sm:text-3xl lg:text-4xl text-lg leading-tight font-bold">
                   Innovative Digital Agency

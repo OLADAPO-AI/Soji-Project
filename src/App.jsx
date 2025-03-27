@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./component/navbar";
 import Homepage from "./pages/Homepage";
-import Services from "./pages/servicesPage";
-// import DevelopmentPage from "./pages/developmentPage";
-// import CareersPage from "./pages/careersPage";
-// import Blogpage from "./pages/blogPage";
-// import WhyjoroPage from "./pages/whyjoroPage";
-
-import Contact from "./pages/contactPage";
 import UnderDevelopment from "./pages/under-development";
 import { FaArrowUp, FaArrowUp19 } from "react-icons/fa6";
+/* import DigitalMarketing from "./pages/digital-marketing";
+import Development from "./pages/development";
+import Careers from "./pages/career";
+import CreativeSolution from "./pages/creative-solution";
+import TechnicalServices from "./pages/technical-services"; */
+import Services from "./pages/services";
+import Contact from "./pages/contact";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,10 +42,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/services" element={<Services />} />
-          {/* <Route path="/development" element={<DevelopmentPage />} />
-          <Route path="/joroServices" element={<WhyjoroPage />} />
-          <Route path="/blog" element={<Blogpage />} />
-          <Route path="/careers" element={<CareersPage />} /> */}
+          {/*  <Route path="/development" element={<Development />} />
+          <Route path="/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/creative-solutions" element={<CreativeSolution />} />
+          <Route path="/technical-services" element={<TechnicalServices />} />
+          <Route path="/careers" element={<Careers />} /> */}
           <Route path="/getintouch" element={<Contact />} />
           <Route path="*" element={<UnderDevelopment />} />
         </Routes>

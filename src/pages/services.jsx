@@ -15,6 +15,11 @@ export const ServiceList = [
     image: "/serv4.webp",
   },
   {
+    title: "Digital Marketing",
+    link: "/",
+    image: "/serv6.webp",
+  },
+  {
     title: "Cloud Automation & Monitoring",
     link: "/",
     image: "/serv5.webp",

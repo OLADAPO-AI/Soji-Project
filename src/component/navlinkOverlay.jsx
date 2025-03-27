@@ -1,14 +1,14 @@
 import React from "react";
 import { FaCircleDot } from "react-icons/fa6";
 
-const serv = [
+export const Serv = [
   {
     category: "Creative Solutions",
+    path: "/creative-solutions",
     offerings: [
       "Website Design",
       "Graphic Design and Branding",
       "User Interface and Experience",
-      "and so on",
     ],
   },
   {
@@ -17,8 +17,8 @@ const serv = [
       "Web Development",
       "Mobile App Development",
       "E-commerce and CMS Solutions",
-      "and so on",
     ],
+    path: "/development",
   },
   {
     category: "Digital Marketing",
@@ -26,8 +26,8 @@ const serv = [
       "SEO and Content Strategy",
       "Social Media Management",
       "PPC and Online Campaigns",
-      "and so on",
     ],
+    path: "/digital-marketing",
   },
   {
     category: "Technical Services",
@@ -35,9 +35,10 @@ const serv = [
       "IT Support and Maintenance",
       "Cybersecurity",
       "Cloud Infrastructure",
-      "and so on",
     ],
+    path: "/technical-services",
   },
+  { category: "Careers", path: "/careers" },
 ];
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -46,7 +47,7 @@ export const CreativeSolutionOverlay = () => {
   return (
     <div className="absolute left-4 top-full w-[500px] bg-black/80 shadow-lg rounded-lg text-sm  text-white transition duration-300 ease-in-out">
       <div>
-        {serv.map((service, i) => {
+        {Serv.map((service, i) => {
           if (service.category === "Creative Solutions") {
             return (
               <div
@@ -81,7 +82,7 @@ export const DevelopmentOverlay = () => {
   return (
     <div className="absolute left-4 top-full w-[500px] bg-black/80 shadow-lg rounded-lg text-sm  text-white transition duration-300 ease-in-out">
       <div>
-        {serv.map((service, i) => {
+        {Serv.map((service, i) => {
           if (service.category === "Development") {
             return (
               <div
@@ -116,7 +117,7 @@ export const TechnicalServicesOverlay = () => {
   return (
     <div className="absolute left-4 top-full w-[500px] bg-black/80 shadow-lg rounded-lg text-sm  text-white transition duration-300 ease-in-out">
       <div>
-        {serv.map((service, i) => {
+        {Serv.map((service, i) => {
           if (service.category === "Technical Services") {
             return (
               <div
@@ -151,7 +152,7 @@ export const DigitalMarketingOverlay = () => {
   return (
     <div className="absolute left-4 top-full w-[500px] bg-black/80 shadow-lg rounded-lg text-sm  text-white transition duration-300 ease-in-out">
       <div>
-        {serv.map((service, i) => {
+        {Serv.map((service, i) => {
           if (service.category === "Digital Marketing") {
             return (
               <div

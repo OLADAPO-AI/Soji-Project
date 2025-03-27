@@ -4,17 +4,11 @@ import {
   CreativeSolutionOverlay,
   DevelopmentOverlay,
   DigitalMarketingOverlay,
+  Serv,
   TechnicalServicesOverlay,
 } from "./navlinkOverlay";
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const LinkInfo = [
-  { title: "Creative Solutions", path: "/creative-solutions" },
-  { title: "Development", path: "/development" },
-  { title: "Digital Marketing", path: "/digital-marketing" },
-  { title: "Technical Services", path: "/technical-services" }, // Fixed typo
-  { title: "Careers", path: "/careers" },
-];
 
 const NavLink = () => {
   const location = useLocation();
@@ -23,11 +17,11 @@ const NavLink = () => {
   return (
     <div className="hidden lg:flex items-center justify-center w-3/5">
       <div className="flex flex-row justify-center items-center whitespace-nowrap relative mx-auto w-full tracking-wider">
-        {LinkInfo.map((link, i) => (
+        {Serv.map((link, i) => (
           <div
             key={i}
             className="relative group"
-            onMouseEnter={() => setHoveredLink(link.title)}
+            onMouseEnter={() => setHoveredLink(link.category)}
             onMouseLeave={() => setHoveredLink(null)} // Hide dropdown when mouse leaves
           >
             <Link
@@ -36,21 +30,21 @@ const NavLink = () => {
                 location.pathname === link.path ? "text-accent" : "text-white"
               } group transition-all duration-300`}
             >
-              {link.title}
+              {link.category}
               <span className="absolute left-0 bottom-0 w-full h-[2px] bg-accent group-hover:scale-x-100 scale-x-0 origin-left transition-transform duration-300 ease-in-out"></span>
             </Link>
 
             {/* Conditionally Render Only the Hovered Dropdown */}
-            {hoveredLink === link.title && (
+            {hoveredLink === link.category && (
               <div className="absolute -left-40 top-full mt-[6px] w-64 bg-black/90 text-white shadow-lg rounded-md z-50">
-                {link.title === "Creative Solutions" && (
+                {link.category === "Creative Solutions" && (
                   <CreativeSolutionOverlay />
                 )}
-                {link.title === "Development" && <DevelopmentOverlay />}
-                {link.title === "Digital Marketing" && (
+                {link.category === "Development" && <DevelopmentOverlay />}
+                {link.category === "Digital Marketing" && (
                   <DigitalMarketingOverlay />
                 )}
-                {link.title === "Technical Services" && (
+                {link.category === "Technical Services" && (
                   <TechnicalServicesOverlay />
                 )}
               </div>

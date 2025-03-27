@@ -1,37 +1,88 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import { LinkInfo } from "./links";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import Button from "./button";
+import { Serv } from "./navlinkOverlay";
 
-const MobileNavbar = ({ isOpen, toggleMenu }) => {
+const MobileNavbar = ({ isOpen }) => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  useEffect(() => {
+    if (!isOpen) {
+      setOpenIndex(null);
+    }
+  }, [isOpen]);
+
   return (
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: isOpen ? "100%" : 0 }}
-      className={`fixed -top-20 w-[100vw] mt-[60px] bg-bgImage2  backdrop-blur-sm bg-cover text-white overflow-hidden transition-all duration-300  ${
-        isOpen ? "h-screen" : "h-0"
+      className={`fixed top-0 left-0 w-screen h-screen bg-bgImage2 backdrop-blur-lg bg-cover text-white transition-all duration-300 ${
+        isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       {/* Menu List */}
-      <ul className="flex flex-col items-center mt-28 space-y-3">
-        {LinkInfo.map((item, index) => (
-          <li key={index} className="w-full text-center">
-            <Link
-              to={item.path}
-              onClick={toggleMenu}
-              className="flex justify-between w-full max-w-full py-3 px-4 text-base border-b border-gray-400 hover:text-accent-dark"
-            >
-              {item.title}
-              <ArrowUpRight size={20} />
-            </Link>
+      <ul className="flex flex-col items-center mt-28 space-y-3 px-6">
+        {Serv.map((item, index) => (
+          <li key={index} className="w-full">
+            {item.offerings && item.offerings.length > 0 ? (
+              // Dropdown for categories with offerings
+              <>
+                <div
+                  onClick={() => toggleAccordion(index)}
+                  className="flex justify-between items-center cursor-pointer w-full py-2 px-6 text-lg font-medium border-b border-gray-500 hover:text-accent transition-all"
+                >
+                  <span>{item.category}</span>
+                  <motion.div
+                    animate={{ rotate: openIndex === index ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown size={20} />
+                  </motion.div>
+                </div>
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="bg-gray-900 bg-opacity-30 rounded-lg mt-2 overflow-hidden"
+                    >
+                      {item.offerings.map((service, i) => (
+                        <Link
+                          key={i}
+                          to={item.path}
+                          className="block py-3 px-6 text-sm text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300"
+                        >
+                          {service}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </>
+            ) : (
+              // Direct link for categories without offerings
+              <Link
+                to={item.path}
+                className="flex justify-between items-center w-full py-4 px-6 text-lg font-medium border-b border-gray-500 hover:text-accent transition-all"
+              >
+                {item.category}
+                <ArrowUpRight size={20} />
+              </Link>
+            )}
           </li>
-        ))}{" "}
+        ))}
       </ul>
-      <div className="flex justify-center w-full px-4">
+
+      {/* CTA Button */}
+      <div className="flex justify-center w-full mt-10 px-6">
         <Link
-          className="bg-accent-dark w-full text-center py-2 rounded-lg hover:bg-accent transition-all duration-300"
+          className="bg-accent-dark w-full text-center py-3 rounded-lg font-semibold text-white hover:bg-accent transition-all duration-300"
           to={"/getintouch"}
         >
           Get in Touch

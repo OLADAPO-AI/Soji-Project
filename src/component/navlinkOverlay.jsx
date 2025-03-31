@@ -13,11 +13,7 @@ export const Serv = [
   },
   {
     category: "Development",
-    offerings: [
-      "Web Development",
-      "Mobile App Development",
-      "E-commerce and CMS Solutions",
-    ],
+    offerings: ["Web Development", "Mobile App Development", "Data Management"],
     path: "/development",
   },
   {

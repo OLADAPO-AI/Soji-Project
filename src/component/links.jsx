@@ -21,11 +21,16 @@ const NavLink = () => {
           <div
             key={i}
             className="relative group"
-            onMouseEnter={() => setHoveredLink(link.category)}
+            onMouseEnter={() =>
+              setHoveredLink(
+                location.pathname === link.path ? null : link.category
+              )
+            }
             onMouseLeave={() => setHoveredLink(null)} // Hide dropdown when mouse leaves
           >
             <Link
               to={link.path}
+              onClick={() => setHoveredLink(null)}
               className={`text-[16px] lg:text-[13px] font-semibold relative lg:font-bold hover:bg-neutral-700/70 xl:px-8 lg:px-2 py-2 ${
                 location.pathname === link.path ? "text-accent" : "text-white"
               } group transition-all duration-300`}

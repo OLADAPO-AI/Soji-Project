@@ -15,6 +15,7 @@ import {
 import { GiPlatform } from "react-icons/gi";
 import { FaRobot } from "react-icons/fa";
 import { BsShieldCheck } from "react-icons/bs";
+import ExperienceSection from "../component/experienceSection";
 
 const offerings = [
   {
@@ -53,16 +54,6 @@ const offerings = [
   },
 ];
 
-const metrics = [
-  { desc: "years experience in mobile development and consulting", Fig: 10 },
-  { desc: "projects of different complexity and scale", Fig: 50 },
-  { desc: "full fledged teams with unique expertise", Fig: 10 },
-  {
-    desc: "mid-senior devlopers with high performance and motivation",
-    Fig: 40,
-  },
-];
-
 function Development() {
   return (
     <div className="min-h-screen bg-black text-text font-poppins">
@@ -82,24 +73,9 @@ function Development() {
             impression on your visitors.
           </p>
         </div>
-        <div className="bg-bgImage3 h-[60vh] lg:col-span-2 rounded-lg bg-cover bg-center bg-no-repeat"></div>
+        <div className="bg-bgImage3 h-[60vh] mt-8 lg:col-span-2 rounded-lg bg-cover bg-center bg-no-repeat"></div>
       </section>
-      <div className="mx-auto flex flex-row flex-wrap justify-center items-start gap-4 lg:grid-cols-4">
-        {metrics.map((cate, i) => {
-          return (
-            <div
-              className="flex flex-col shadow  bg-white/25 backdrop-blur-md  px-2 text-center  items-center text-white rounded-lg gap-4 xl:w-[250px] lg:w-[200px] w-[200px]  h-[200px]  justify-center"
-              key={i}
-            >
-              <p className="text-5xl text-yellow-500 flex flex-row items-center font-bold justify-center">
-                <span>{cate.Fig}</span>
-                <FaPlus className="text-4xl" />
-              </p>
-              <p className="text-[14px] ">{cate.desc}</p>
-            </div>
-          );
-        })}
-      </div>
+      <ExperienceSection />
       <div className="mt-10 bg-white rounded-t-xl py-20 px-4 min-h-[100vh] grid grid-cols-1 gap-12">
         {offerings.map((serv, i) => {
           const control = useAnimation();

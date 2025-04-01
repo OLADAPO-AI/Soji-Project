@@ -14,12 +14,12 @@ const metrics = [
 
 const ExperienceSection = () => {
   return (
-    <div className="mb-32 pt-16 lg:pt-0">
+    <div className="mb-32 pt-12 px-4 lg:pt-0">
       <h1 className="text-2xl text-white lg:text-4xl pb-8 lg:pb-12 font-semibold text-center">
         Years of experience in mobile development and <br />
         consulting
       </h1>
-      <div className="mx-auto flex flex-row flex-wrap justify-center items-start gap-4 lg:grid-cols-4">
+      <div className="mx-auto flex flex-row flex-wrap justify-center items-start gap-4 ">
         {metrics.map((cate, i) => (
           <MetricCard key={i} fig={cate.Fig} desc={cate.desc} />
         ))}
@@ -60,11 +60,11 @@ const MetricCard = ({ fig, desc }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={controls}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col shadow bg-white/25 backdrop-blur-md px-2 text-center items-center text-white rounded-lg gap-4 xl:w-[250px] lg:w-[200px] w-[200px] h-[200px] justify-center"
+      className="flex flex-col shadow bg-white/25 backdrop-blur-md px-2 text-center items-center text-white rounded-lg gap-2 xl:w-[250px] sm:w-[200px] w-[150px] h-[150px] sm:h-[200vh] duration-200 justify-center"
     >
-      <p className="text-5xl text-yellow-500 flex flex-row items-center font-bold justify-center">
+      <p className="text-3xl sm:text-5xl text-yellow-500 flex flex-row items-center font-bold justify-center">
         <span>{count}</span>
-        <FaPlus className="text-4xl" />
+        <FaPlus className="sm:text-4xl text-2xl" />
       </p>
       <p className="text-[14px]">{desc}</p>
     </motion.div>

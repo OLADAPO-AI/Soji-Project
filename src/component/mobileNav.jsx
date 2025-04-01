@@ -4,7 +4,7 @@ import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Serv } from "./navlinkOverlay";
 
-const MobileNavbar = ({ isOpen }) => {
+const MobileNavbar = ({ isOpen, toggleNav }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -56,6 +56,7 @@ const MobileNavbar = ({ isOpen }) => {
                         <Link
                           key={i}
                           to={item.path}
+                          onClick={toggleNav}
                           className="block py-3 px-6 text-sm text-gray-300 hover:text-white hover:bg-gray-800 transition-all duration-300"
                         >
                           {service}

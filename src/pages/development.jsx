@@ -4,6 +4,7 @@ import Footer from "../component/Footer";
 import ExperienceSection from "../component/development/experienceSection";
 import DevHeroSection from "../component/development/heroSection";
 import DevServices from "../component/development/devServices";
+import WhyJoroservice from "../component/development/whyJoroservice";
 
 function Development() {
   return (
@@ -11,7 +12,7 @@ function Development() {
       <DevHeroSection />
       <ExperienceSection />
       <DevServices />
-
+      <WhyJoroservice />
       <Footer />
     </div>
   );

@@ -60,7 +60,7 @@ const MetricCard = ({ fig, desc }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={controls}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col shadow bg-white/25 backdrop-blur-md px-2 text-center items-center text-white rounded-lg gap-2 xl:w-[250px] sm:w-[200px] w-[150px] h-[150px] sm:h-[200vh] duration-200 justify-center"
+      className="flex flex-col shadow bg-white/25 backdrop-blur-md px-2 text-center items-center text-white rounded-lg gap-2 xl:w-[250px] sm:w-[200px] w-[150px] h-[150px] sm:h-[150px] duration-200 justify-center"
     >
       <p className="text-3xl sm:text-5xl text-yellow-500 flex flex-row items-center font-bold justify-center">
         <span>{count}</span>

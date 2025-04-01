@@ -35,8 +35,7 @@ const WhyJoroservice = () => {
           Why choose JoroServices as your
           <Typewriter
             words={[
-              " mobile app development partner?",
-              "  web apllication development partner?",
+              "  website development partner?",
               " software development partner?",
             ]}
             loop={true}

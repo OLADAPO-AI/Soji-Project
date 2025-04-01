@@ -70,6 +70,7 @@ const MobileNavbar = ({ isOpen, toggleNav }) => {
               // Direct link for categories without offerings
               <Link
                 to={item.path}
+                onClick={toggleNav}
                 className="flex justify-between items-center w-full py-4 px-6 text-lg font-medium border-b border-gray-500 hover:text-accent transition-all"
               >
                 {item.category}
@@ -83,6 +84,7 @@ const MobileNavbar = ({ isOpen, toggleNav }) => {
       {/* CTA Button */}
       <div className="flex justify-center w-full mt-10 px-6">
         <Link
+          onClick={toggleNav}
           className="bg-accent-dark w-full text-center py-3 rounded-lg font-semibold text-white hover:bg-accent transition-all duration-300"
           to={"/getintouch"}
         >

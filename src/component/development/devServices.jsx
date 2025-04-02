@@ -41,7 +41,7 @@ const offerings = [
   },
   {
     title: "Data Management",
-    image: "/bg8.webp",
+    image: "/pexel3.webp",
     tagline: "Transforming data into actionable insights and efficiency.",
     desc: "Leverage the power of structured data to make informed decisions, optimize workflows, and enhance business intelligence. Our data management solutions ensure seamless data integration, security, and accessibility, helping you unlock valuable insights while maintaining compliance and governance.",
     category: [

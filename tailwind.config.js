@@ -11,6 +11,9 @@ export default {
         bgImage4: "url('/bg9.webp')",
         bgImage5: "url('/bg10.webp')",
         bgImage6: "url('/bg11.webp')",
+        bgImage7: "url('/pexel1.webp')",
+        bgImage8: "url('/pexel2.webp')",
+        bgImage9: "url('/pexel3.webp')",
         //   'linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
       },
       fontFamily: {

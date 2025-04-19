@@ -68,7 +68,9 @@ const Navbar = () => {
         </button>
       </div>{" "}
       {/* Mobile Navbar */}
-      <MobileNavbar isOpen={openNav} toggleNav={() => setOpenNav(false)} />
+      {openNav && (
+        <MobileNavbar isOpen={openNav} toggleNav={() => setOpenNav(false)} />
+      )}
     </div>
   );
 };

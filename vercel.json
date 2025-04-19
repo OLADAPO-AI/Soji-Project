@@ -1,3 +1,5 @@
 {
+  "version": 2,
+  "domains": ["joroservices.org"],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

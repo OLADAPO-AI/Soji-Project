@@ -36,7 +36,7 @@ const services = [
 
 const DesignCard = () => {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900 p-6 md:p-12">
+    <div className="min-h-screen bg-gray-100 rounded-3xl text-gray-900 p-6 md:p-12">
       {/* Header Section */}
       <div className=" max-w-2xl">
         <h1 className="text-2xl md:text-4xl">Meeting all your design needs</h1>

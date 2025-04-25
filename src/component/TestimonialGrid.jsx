@@ -1,99 +1,76 @@
-import React, { useEffect, useRef } from "react";
-import TestimonialCard from "./TestimonialCard";
+// src/components/TestimonialGrid.jsx
+import React, { useEffect, useRef } from 'react';
+import TestimonialCard from './TestimonialCard';
 
 const testimonials = [
   {
-    name: "John Carter",
-    role: "CEO, InnovateTech Solutions",
     quote:
-      "Their expertise in digital transformation helped us modernize our IT infrastructure and improve operational efficiency by 40%.",
-    image: "/photo-7.webp",
+      'Joro Services streamlined our patient portal launch in under six weeks, boosting user registrations by 60% within the first month.',
   },
   {
-    name: "Emily Zhang",
-    role: "CTO, CloudNova Inc.",
     quote:
-      "The cloud migration strategy they provided was flawless. We achieved zero downtime and reduced costs by 25%.",
-    image: "/photo-8.webp",
+      'Their cloud migration plan was on point—we saw a 35% drop in hosting costs and zero downtime during the transition.',
   },
   {
-    name: "Michael O'Connell",
-    role: "CIO, SecureNet Systems",
     quote:
-      "Their cybersecurity solutions have been a game-changer for us. We now have a robust defense against cyber threats.",
-    image: "/photo-4.webp",
+      'After implementing their security roadmap, phishing incidents declined by 80% and our audit passed with no critical findings.',
   },
   {
-    name: "Sarah Thompson",
-    role: "VP of IT, DataFlow Corp.",
     quote:
-      "Their IT strategy consulting helped us align our technology goals with our business objectives. Highly recommend their services!",
-    image: "/photo-6.webp",
+      'Their custom dashboard gave us real‑time metrics we never had before. Our delivery accuracy improved from 92% to 98%.',
   },
   {
-    name: "David Kim",
-    role: "Director of Engineering, CodeCraft",
     quote:
-      "The DevOps practices they implemented have significantly improved our deployment speed and reliability.",
-    image: "/photo-5.webp",
+      'The website redesign increased average session duration by 45% and reduced bounce rate by 30%. Our conversion rate is the highest it’s ever been.',
   },
   {
-    name: "Laura Evans",
-    role: "COO, FutureTech Enterprises",
     quote:
-      "Their IT consulting services have been instrumental in streamlining our workflows and boosting productivity.",
-    image: "/photo-7.webp",
+      'Their Agile coaching replaced our waterfall delays. Our team now ships features every two weeks with confidence and speed.',
   },
 ];
 
-const TestimonilaGrid = () => {
+const TestimonialGrid = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
     const container = containerRef.current;
+    if (!container) return;
 
-    // Duplicate the testimonials to create a seamless loop
-    const duplicatedTestimonials = [...testimonials, ...testimonials];
+    // Duplicate testimonials for seamless loop
+    const items = [...testimonials, ...testimonials];
+    const cardWidth = container.children[0]?.offsetWidth || 300;
+    container.style.width = `${items.length * cardWidth}px`;
 
-    // Set the width of the container to accommodate the duplicated testimonials
-    const testimonialWidth = container.children[0]?.offsetWidth || 300;
-    container.style.width = `${
-      duplicatedTestimonials.length * testimonialWidth
-    }px`;
+    let offset = 0;
+    const speed = 1; // px per frame
 
-    // Scroll animation
-    let scrollAmount = 0;
-    const scrollSpeed = 1;
-
-    const scroll = () => {
-      scrollAmount += scrollSpeed;
-      if (scrollAmount >= container.scrollWidth / 2) {
-        scrollAmount = 0;
-      }
-      container.style.transform = `translateX(-${scrollAmount}px)`;
-      requestAnimationFrame(scroll);
+    const animate = () => {
+      offset = (offset + speed) % ((items.length * cardWidth) / 2);
+      container.style.transform = `translateX(-${offset}px)`;
+      requestAnimationFrame(animate);
     };
 
-    requestAnimationFrame(scroll);
+    animate();
 
-    // Cleanup animation on unmount
-    return () => cancelAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animate);
   }, []);
 
   return (
-    <div className="w-full overflow-hidden py-8">
-      <div ref={containerRef} className="flex flex-row gap-8 lg:gap-0">
-        {[...testimonials, ...testimonials].map((testimonial, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 w-[300px] md:w-[400px] lg:w-[500px]"
-          >
-            <TestimonialCard testimonial={testimonial} />
-          </div>
-        ))}
+    <section className="py-16 bg-white text-black">
+      <h2 className="text-3xl font-semibold text-center mb-8">
+        What Our Clients Say
+      </h2>
+      <div className="overflow-hidden">
+        <div ref={containerRef} className="flex gap-8 lg:gap-12">
+          {[...testimonials, ...testimonials].map((data, idx) => (
+            <div key={idx} className="flex-shrink-0 w-72 md:w-80">
+              <TestimonialCard data={data} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default TestimonilaGrid;
+export default TestimonialGrid;

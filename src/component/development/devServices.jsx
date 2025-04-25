@@ -1,122 +1,95 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import { useAnimation, useInView, motion } from "framer-motion";
-import { div } from "framer-motion/client";
-import React, { useEffect, useRef } from "react";
-import { FaCircleDot, FaPlus } from "react-icons/fa6";
-import { FaDatabase, FaLaptopCode } from "react-icons/fa6";
-import { LiaLaptopCodeSolid } from "react-icons/lia";
-import {
-  MdAnalytics,
-  MdApi,
-  MdCloudUpload,
-  MdShoppingBag,
-} from "react-icons/md";
-import { GiPlatform } from "react-icons/gi";
-import { FaRobot } from "react-icons/fa";
-import { BsShieldCheck } from "react-icons/bs";
+import React, { useEffect, useRef } from 'react';
+import { useAnimation, motion, useInView } from 'framer-motion';
+import { FaCircleDot } from 'react-icons/fa6';
+import { LiaLaptopCodeSolid } from 'react-icons/lia';
+import { FaDatabase, FaLaptopCode } from 'react-icons/fa6';
+import { MdShoppingBag, MdCloudUpload, MdAnalytics } from 'react-icons/md';
+import { GiPlatform } from 'react-icons/gi';
+import { FaRobot } from 'react-icons/fa';
+import { BsShieldCheck } from 'react-icons/bs';
 
 const offerings = [
   {
-    title: "Web Development",
-    image: "/bg8.webp",
-    tagline: "Designing websites tailored to your business needs.",
-    desc: "From the first consultation to continuous support, we are dedicated to delivering outstanding service and ensuring your satisfaction. Our focus is on building a lasting partnership founded on trust, transparency, and clear communication. With a deep understanding of your objectives, our web team will recommend the most suitable CMS or custom solution to help you achieve your goals.",
+    title: 'Custom Web Development',
+    image: '/bg8.webp',
+    tagline: 'Tailored websites built for performance and scale',
+    desc:
+      'Our team designs and develops secure, responsive websites that grow with your business. From informative sites to complex e-commerce platforms, we deliver solutions focused on reliability and user experience.',
     category: [
-      { title: "Front-end development", icon: LiaLaptopCodeSolid },
-      { title: "Back-end development", icon: FaDatabase },
-
-      { title: "Ecommerce development", icon: MdShoppingBag },
+      { title: 'Front-end Engineering', icon: LiaLaptopCodeSolid },
+      { title: 'Back-end Development', icon: FaDatabase },
+      { title: 'eCommerce Solutions', icon: MdShoppingBag },
     ],
   },
   {
-    title: "Custom Mobile App Development",
-    image: "/bg9.webp",
-    tagline: "Innovative and scalable apps for seamless user experiences.",
-    desc: "We create high-performance mobile applications tailored to your business needs, ensuring a seamless experience across all devices. Whether it's iOS, Android, or cross-platform development, our expert team leverages cutting-edge technology to build intuitive and scalable solutions that engage users and drive business growth.",
+    title: 'Mobile App Solutions',
+    image: '/bg9.webp',
+    tagline: 'Native and cross-platform applications',
+    desc:
+      'We build intuitive mobile apps for iOS and Android, ensuring a seamless experience across devices. Whether native, hybrid or cross-platform, our apps are designed to engage users and drive retention.',
     category: [
-      { title: "Native app development", icon: FaLaptopCode },
-      { title: "Cross-platform development", icon: GiPlatform },
-      { title: "Hybrid app development", icon: FaRobot },
+      { title: 'iOS & Android', icon: FaLaptopCode },
+      { title: 'Cross-platform', icon: GiPlatform },
+      { title: 'App Automation', icon: FaRobot },
     ],
   },
   {
-    title: "Data Management",
-    image: "/pexel3.webp",
-    tagline: "Transforming data into actionable insights and efficiency.",
-    desc: "Leverage the power of structured data to make informed decisions, optimize workflows, and enhance business intelligence. Our data management solutions ensure seamless data integration, security, and accessibility, helping you unlock valuable insights while maintaining compliance and governance.",
+    title: 'Data & Analytics Services',
+    image: '/pexel3.webp',
+    tagline: 'Insights to power smarter decisions',
+    desc:
+      'Harness your data with end-to-end management, integration and analytics. Our solutions ensure data quality, security and accessibility, turning raw information into actionable insights that fuel growth.',
     category: [
-      { title: "Data Integration & Migration", icon: MdCloudUpload },
-      { title: "Data Security & Compliance", icon: BsShieldCheck },
-      { title: "Big Data & Analytics", icon: MdAnalytics },
+      { title: 'Data Integration', icon: MdCloudUpload },
+      { title: 'Security & Compliance', icon: BsShieldCheck },
+      { title: 'Business Intelligence', icon: MdAnalytics },
     ],
   },
 ];
 
 const DevServices = () => {
   return (
-    <div className="mt-10 bg-white rounded-t-xl py-20 px-4 min-h-[100vh] grid grid-cols-1 gap-12">
+    <div className="mt-10 bg-white rounded-t-xl py-20 px-4 min-h-screen grid gap-12">
       {offerings.map((serv, i) => {
         const control = useAnimation();
         const ref = useRef(null);
-        const isInView = useInView(ref, { once: true }); // Only animate once when in view
+        const isInView = useInView(ref, { once: true });
 
         useEffect(() => {
-          if (isInView) {
-            control.start("visible");
-          }
+          if (isInView) control.start('visible');
         }, [isInView, control]);
 
         return (
           <motion.div
             key={i}
-            ref={ref} // Attach ref to track visibility
-            variants={{
-              hidden: { opacity: 0, y: 75 }, // Alternate direction
-              visible: { opacity: 1, y: 0 },
-            }}
+            ref={ref}
+            variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
             initial="hidden"
             animate={control}
-            transition={{ duration: 1.5, delay: i * 0.3 }} // Stagger effect
-            className="z-10 flex flex-col rounded-lg shadow-lg"
+            transition={{ duration: 1, delay: i * 0.3 }}
+            className="flex flex-col rounded-lg shadow-lg overflow-hidden"
           >
-            <div
-              className={`text-black p-6  flex flex-col  ${
-                i % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
-              } gap-4 lg:gap-12 `}
-            >
+            <div className={`flex flex-col lg:flex-row gap-6`}>
               <div className="lg:w-1/2">
-                <img src={serv.image} alt="" />
+                <img src={serv.image} alt={serv.title} className="w-full h-auto" />
               </div>
-              <div className="flex lg:w-1/2  flex-col justify-center">
-                <p className="flex flex-row items-center gap-4 pb-4 text-sm text-gray-700 font-semibold">
-                  <FaCircleDot
-                    className={`${
-                      i % 2 !== 0 ? "text-red-400" : "text-yellow-400"
-                    }`}
-                  />
+              <div className="lg:w-1/2 flex flex-col justify-center p-6">
+                <p className="flex items-center gap-2 text-sm font-semibold text-accent-dark mb-2">
+                  <FaCircleDot />
                   <span>{serv.title}</span>
                 </p>
-                <h2 className="text-2xl font-semibold">{serv.tagline}</h2>
-                <p className="mt-2 text-sm">{serv.desc}</p>
-                <div className="flex py-6 flex-row justify-center rounded-b-lg gap-2 flex-wrap lg:gap-8">
-                  {" "}
-                  {serv.category.map((cate, i) => {
-                    return (
-                      <div
-                        className="flex flex-col shadow  bg-black  px-2 text-center  items-center text-white rounded-lg gap-2 w-[120px] sm:w-[150px] h-[120px]  justify-center"
-                        key={i}
-                      >
-                        <p className="text-[12px] ">{cate.title}</p>
-                        <p
-                          className={`text-[50px]  ${
-                            i % 2 !== 0 ? "text-accent-dark" : "text-accent"
-                          }`}
-                        >
-                          <cate.icon />
-                        </p>
-                      </div>
-                    );
-                  })}
+                <h2 className="text-2xl font-bold mb-2 text-black">{serv.tagline}</h2>
+                <p className="text-sm text-gray-700 mb-4">{serv.desc}</p>
+                <div className="flex flex-wrap gap-4">
+                  {serv.category.map((cate, idx) => (
+                    <div
+                      key={idx}
+                      className="flex flex-col items-center justify-center bg-black text-white p-4 rounded-lg w-32 h-32"
+                    >
+                      <cate.icon className="text-2xl text-accent-dark mb-2" />
+                      <p className="text-xs text-center">{cate.title}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

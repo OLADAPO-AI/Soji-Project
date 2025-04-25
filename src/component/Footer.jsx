@@ -1,176 +1,79 @@
-import { Link } from "react-router-dom";
+// src/components/Footer.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="px-4 pt-12 mx-auto bg-slate-950 max-w-7xl ">
-      <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
-        {/* Logo and Description */}
-        <div className="col-span-1 md:col-span-2 lg:col-span-3">
-          <Link to="/" className="text-2xl font-bold text-white">
+    <footer className="bg-slate-950 text-white px-6 py-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        {/* Brand & About */}
+        <div className="lg:col-span-3">
+          <Link to="/" className="text-2xl font-bold">
             Joro Services
           </Link>
-          <p className="mt-4 text-sm text-gray-400">
-            Bring together your discussions, memberships, and content. Integrate
-            a thriving community wherever your audience is, all under your own
-            brand.
+          <p className="mt-4 text-gray-400 text-sm">
+            Empowering businesses and individuals with tailored digital marketing,
+            development, and design solutions that drive growth and engagement.
           </p>
-          <label className="mt-4 block">
-            <span className="sr-only">Select a language</span>
-            <select className="w-full p-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-              <option>English</option>
-              <option>French</option>
-            </select>
-          </label>
         </div>
 
-        {/* Product Links */}
-        <nav className="col-span-1 md:col-span-1 lg:col-span-2">
-          <p className="mb-4 text-sm font-semibold text-gray-400 uppercase">
-            Product
-          </p>
-          <div className="space-y-2">
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Features
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Integrations
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Documentation
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              FAQs
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Pricing
-            </Link>
+        {/* Navigation Links */}
+        <nav className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div>
+            <h3 className="text-accent-dark font-semibold mb-2 uppercase text-sm">
+              Services
+            </h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
+              <li><Link to="/digital-marketing" className="hover:text-white">Digital Marketing</Link></li>
+              <li><Link to="/creative-solutions" className="hover:text-white">Creative Solutions</Link></li>
+              <li><Link to="/development" className="hover:text-white">Development</Link></li>
+              <li><Link to="/careers" className="hover:text-white">Careers</Link></li>
+            </ul>
           </div>
-        </nav>
-
-        {/* About Links */}
-        <nav className="col-span-1 md:col-span-1 lg:col-span-2">
-          <p className="mb-4 text-sm font-semibold text-gray-400 uppercase">
-            About
-          </p>
-          <div className="space-y-2">
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Press-Kit
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
+          <div>
+            <h3 className="text-accent-dark font-semibold mb-2 uppercase text-sm">
               Company
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Privacy
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Blog
-            </Link>
+            </h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
+              <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link to="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-white">Terms of Service</Link></li>
+            </ul>
           </div>
         </nav>
 
-        {/* Contact Links */}
-        <nav className="col-span-1 md:col-span-1 lg:col-span-2">
-          <p className="mb-4 text-sm font-semibold text-gray-400 uppercase">
-            Contact
-          </p>
-          <div className="space-y-2">
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Twitter
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Instagram
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Email
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Advertising
-            </Link>
-            <Link
-              to="#"
-              className="block text-sm text-gray-300 hover:text-accent"
-            >
-              Chat
-            </Link>
-          </div>
-        </nav>
-
-        {/* Newsletter Subscription */}
-        <div className="col-span-1 md:col-span-2 lg:col-span-3">
-          <p className="mb-4 text-sm font-semibold text-gray-400 uppercase">
-            SUBSCRIBE TO OUR NEWSLETTER
-          </p>
-          <form action="#" className="flex flex-col space-y-2">
+        {/* Newsletter & Social */}
+        <div className="lg:col-span-3">
+          <h3 className="text-accent-dark font-semibold uppercase text-sm mb-2">
+            Newsletter
+          </h3>
+          <form className="flex flex-col sm:flex-row gap-2">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="w-full p-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="Your email"
+              className="w-full px-3 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-dark"
             />
             <button
               type="submit"
-              className="w-full p-2 text-sm font-medium text-whitebefore:bg-accent hover:bg-accent-dark rounded-xl bg-accent text-white transition duration-300 ease-in-out  disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-primary"
+              className="px-4 py-2 bg-accent-dark text-black font-semibold rounded hover:bg-opacity-90 transition"
             >
               Subscribe
             </button>
           </form>
-          <p className="mt-2 text-sm text-gray-400">
-            Get lessons and insights on how to grow your freelance business.
-          </p>
+          <div className="mt-6 flex space-x-4">
+            <Link to="#" className="text-gray-400 hover:text-white"><FaFacebookF /></Link>
+            <Link to="#" className="text-gray-400 hover:text-white"><FaTwitter /></Link>
+            <Link to="#" className="text-gray-400 hover:text-white"><FaLinkedinIn /></Link>
+            <Link to="#" className="text-gray-400 hover:text-white"><FaInstagram /></Link>
+          </div>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="flex flex-col items-center justify-between pt-8 mt-8 border-t border-gray-800 md:flex-row">
-        <p className="mb-4 text-sm text-gray-400 md:mb-0">
-          © Copyright 2025 Joro Services. All Rights Reserved.
-        </p>
-        <div className="flex space-x-4">
-          <Link to="#" className="text-sm text-gray-400 hover:text-accent">
-            Terms
-          </Link>
-          <Link to="#" className="text-sm text-gray-400 hover:text-accent">
-            Privacy
-          </Link>
-        </div>
+      <div className="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} Joro Services. All rights reserved.
       </div>
     </footer>
   );

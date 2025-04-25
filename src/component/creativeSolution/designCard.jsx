@@ -1,66 +1,56 @@
-import React from "react";
+import React from 'react';
 
 const services = [
   {
-    title: "Print Design",
+    title: 'Brand Identity & Strategy',
     description:
-      "Our print design services include concept work, brochure and leaflet design, advertising graphics, merchandise design, and more. We also work with professional printers to guarantee a quality final product worthy of representing your brand.",
+      'We craft cohesive brand identities that resonate with your audience. From logo creation to a complete visual language, we ensure every touchpoint reflects your story.',
   },
   {
-    title: "Packaging Design",
+    title: 'UX/UI Design',
     description:
-      "Your packaging should convey everything your brand is about while helping your product stand out on crowded shelves. We oversee the entire packaging design process to maintain quality and consistency at every stage.",
+      'Our UX research and interface designs focus on clarity and engagement. We streamline user journeys, reducing friction and increasing satisfaction.',
   },
   {
-    title: "Graphic Design",
+    title: 'Responsive Web Development',
     description:
-      "From logos to marketing materials, we craft compelling visuals that strengthen your brand identity. Our graphic design services help businesses stand out with bold, creative, and effective designs.",
-  },
-
-  {
-    title: "Responsive Design",
-    description:
-      "Ensure a consistent user experience across all devices with a fully responsive website that adapts seamlessly to different screen sizes and resolutions.",
+      'Using the latest front-end frameworks, we build fast, accessible websites that adapt seamlessly across devices, delivering performance and reliability.',
   },
   {
-    title: "Accessible Web Design",
+    title: 'Digital Marketing & SEO',
     description:
-      "Create an inclusive website that meets WCAG accessibility standards, ensuring ease of navigation and usability for all users, regardless of ability.",
+      'From targeted ad campaigns to organic search optimisation, we develop data-driven strategies that boost visibility and drive qualified traffic.',
   },
   {
-    title: "UX Design",
+    title: 'Content Strategy & Creation',
     description:
-      "Improve user satisfaction by optimizing your website’s structure and flow, guiding visitors toward their goals with a smooth and engaging browsing experience.",
+      'We help you tell your brand’s story with compelling copy, engaging visuals, and multimedia content that connects and converts.',
   },
 ];
 
 const DesignCard = () => {
   return (
-    <div className="min-h-screen bg-gray-100 rounded-3xl text-gray-900 p-6 md:p-12">
+    <div className="min-h-screen bg-white text-black p-8 md:p-16">
       {/* Header Section */}
-      <div className=" max-w-2xl">
-        <h1 className="text-2xl md:text-4xl">Meeting all your design needs</h1>
-        <p className="mt-4 text-gray-600 text-sm">
-          Striking designs are crucial for creating a strong first impression
-          and leaving a lasting impact on your customers. Our experts specialize
-          in crafting unique designs that will make your business stand out and
-          engage customers in ways that align with your brand messaging and
-          goals.
+      <div className="max-w-3xl mx-auto text-center">
+        <h1 className="text-3xl md:text-5xl font-bold">Welcome to Joro Services</h1>
+        <p className="mt-4 text-black text-base md:text-lg">
+          At Joro Services, we blend creativity, technology, and strategy to deliver tailored digital experiences that captivate your audience and drive growth. From strategic branding to seamless web development and targeted marketing, we support your vision at every step.
         </p>
       </div>
 
       {/* Service Cards */}
-      <div className="lg:mt-16 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
+      <div className="lg:mt-16 mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md p-6 border border-gray-200"
+            className="bg-white rounded-2xl shadow-lg p-6 border border-accent-dark hover:shadow-xl transition"
           >
-            <span className="text-xs font-medium text-pink-500 uppercase">
+            <span className="text-sm font-medium text-accent-dark uppercase">
               Service
             </span>
-            <h2 className="text-2xl font-semibold mt-2">{service.title}</h2>
-            <p className="text-gray-600 text-sm mt-3">{service.description}</p>
+            <h2 className="text-2xl font-semibold mt-2 text-black">{service.title}</h2>
+            <p className="text-black text-sm mt-3">{service.description}</p>
           </div>
         ))}
       </div>

@@ -1,24 +1,12 @@
 const CardGrid = () => {
   const cards = [
     {
-      img: 'https://tecdn.b-cdn.net/img/new/standard/city/041.webp',
-      location: 'New York Office',
-      address: '123 Broadway, Suite 1001, New York, NY 10001, USA',
-      phone: '+1 (212) 555-1234',
-    },
-    {
       img: 'https://tecdn.b-cdn.net/img/new/standard/city/042.webp',
-      location: 'London Office',
-      address: '45 King Street, London, EC2V 8AE, United Kingdom',
+      location: 'Registered Office',
+      address: 'Kemp House, 152–160 City Road, London, EC1V 2NX, United Kingdom',
       phone: '+44 (0)20 7946 0958',
     },
-    {
-      img: 'https://tecdn.b-cdn.net/img/new/standard/city/044.webp',
-      location: 'Tokyo Office',
-      address: '1-2-3 Shibuya, Shibuya-ku, Tokyo 150-0002, Japan',
-      phone: '+81 (0)3 1234 5678',
-    },
-  ]
+  ];
 
   return (
     <div className="flex flex-wrap justify-center gap-6 p-6">
@@ -44,7 +32,7 @@ const CardGrid = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default CardGrid
+export default CardGrid;

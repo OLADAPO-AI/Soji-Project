@@ -3,28 +3,49 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./component/navbar";
 import Homepage from "./pages/Homepage";
 import UnderDevelopment from "./pages/under-development";
-import { FaArrowUp, FaArrowUp19 } from "react-icons/fa6";
-import DigitalMarketing from "./pages/digital-marketing";
+import { FaArrowUp } from "react-icons/fa6";
+
+// Main Pages
+import DigitalMarketing from "./pages/digitalMarketing";
 import Development from "./pages/development";
-import CreativeSolution from "./pages/creative-solution";
-import TechnicalServices from "./pages/technical-services";
+import Careers from "./pages/career";
+import CreativeSolution from "./pages/creativeSolutions";
+import TechnicalServices from "./pages/technicalServices";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
 
-const App = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 300); // Show after scrolling 300px
-    };
+// Creative Solutions Subpages (slug-aligned)
+import WebsiteDesign from "./pages/creativeSolutions/WebsiteDesign";
+import GraphicDesignAndBranding from "./pages/creativeSolutions/GraphicDesignAndBranding";
+import UserInterfaceAndExperience from "./pages/creativeSolutions/UserInterfaceAndExperience";
 
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+// Development Subpages
+import WebDevelopment from "./pages/development/WebDevelopment";
+import MobileAppDevelopment from "./pages/development/MobileAppDevelopment";
+import DataManagement from "./pages/development/DataManagement";
+
+// Digital Marketing Subpages
+import SEOAndContentStrategy from "./pages/digitalMarketing/SEOAndContentStrategy";
+import SocialMediaManagement from "./pages/digitalMarketing/SocialMediaManagement";
+import PPCAndOnlineCampaigns from "./pages/digitalMarketing/PPCAndOnlineCampaigns";
+
+// Technical Services Subpages
+import ItSupportAndMaintenance from "./pages/technicalServices/ItSupportAndMaintenance";
+import Cybersecurity from "./pages/technicalServices/Cybersecurity";
+import CloudInfrastructure from "./pages/technicalServices/CloudInfrastructure";
+
+function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsVisible(window.scrollY > 300);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = () =>
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+
   return (
     <BrowserRouter>
       <div className="bg-background-dark min-h-[100vw] w-full font-nunito">
@@ -39,19 +60,42 @@ const App = () => {
 
         <Navbar />
         <Routes>
+          {/* Main Pages */}
           <Route path="/" element={<Homepage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/development" element={<Development />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/creative-solutions" element={<CreativeSolution />} />
           <Route path="/technical-services" element={<TechnicalServices />} />
-
+          <Route path="/careers" element={<Careers />} />
           <Route path="/getintouch" element={<Contact />} />
+
+          {/* Creative Solutions Subpages */}
+          <Route path="/creative-solutions/website-design" element={<WebsiteDesign />} />
+          <Route path="/creative-solutions/graphic-design-and-branding" element={<GraphicDesignAndBranding />} />
+          <Route path="/creative-solutions/user-interface-and-experience" element={<UserInterfaceAndExperience />} />
+
+          {/* Development Subpages */}
+          <Route path="/development/web-development" element={<WebDevelopment />} />
+          <Route path="/development/mobile-app-development" element={<MobileAppDevelopment />} />
+          <Route path="/development/data-management" element={<DataManagement />} />
+
+          {/* Digital Marketing Subpages */}
+          <Route path="/digital-marketing/seo-and-content-strategy" element={<SEOAndContentStrategy />} />
+          <Route path="/digital-marketing/social-media-management" element={<SocialMediaManagement />} />
+          <Route path="/digital-marketing/ppc-and-online-campaigns" element={<PPCAndOnlineCampaigns />} />
+
+          {/* Technical Services Subpages */}
+          <Route path="/technical-services/it-support-and-maintenance" element={<ItSupportAndMaintenance />} />
+          <Route path="/technical-services/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/technical-services/cloud-infrastructure" element={<CloudInfrastructure />} />
+
+          {/* Fallback */}
           <Route path="*" element={<UnderDevelopment />} />
         </Routes>
       </div>
     </BrowserRouter>
   );
-};
+}
 
 export default App;

@@ -1,35 +1,39 @@
 import React from "react";
 import { FaCircleDot } from "react-icons/fa6";
-import Slider from "../slider/slider";
 
 const DigitalHeroSection = () => {
   return (
-    <section className="relative pt-20 p-4  w-full overflow-hidden grid grid-cols-1 lg:grid-cols-2 h-screen bg-black gap-4">
-      <div className="col-span-1 flex flex-col justify-center">
-        <p className="flex flex-row pt-4 items-center gap-4 pb-4 text-xs">
+    <section className="relative grid p-4 justify-center grid-cols-1 lg:grid-cols-5 w-full overflow-hidden min-h-screen lg:items-center gap-4">
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          className="object-cover w-full h-full max-w-full"
+          src="/vid1.mp4"
+          muted
+          loop
+          autoPlay
+        />
+      </div>
+
+      {/* Hero Content */}
+      <div className="relative z-20 pt-16 lg:pt-0 lg:col-span-3 flex flex-col">
+        <p className="flex flex-row items-center gap-4 pb-4 text-xs">
           <FaCircleDot className="text-red-400" />
-          <span>Digital Marketing</span>
+          <span>Development</span>
         </p>
-
         <h1 className="text-3xl lg:text-5xl font-[500] text-white">
-          Strategic Marketing, All in One Place
+          Build Your Digital Presence <br />
+          with JoroServices
         </h1>
-
-        <h2 className="text-base lg:text-lg text-blue-300 mt-2 font-medium">
-          Elegant marketing. Unified delivery.
-        </h2>
-
         <p className="text-sm lg:text-base text-gray-300 w-4/5 mt-4">
-          Our full-service marketing retainer is designed to provide end-to-end
-          support across digital channels. From strategy and execution to
-          reporting and optimisation, we cover every aspect to help you meet
-          your business goals effectively.
+          Partnering with us means getting a website that truly represents your
+          brand, highlights your strengths, and leaves a lasting impression on
+          your visitors.
         </p>
       </div>
 
-      <div className="col-span-1 h-[50vh] lg:h-[80vh]">
-        <Slider />
-      </div>
+      {/* Bottom Right Image Section */}
+      <div className="absolute bottom-0 right-0 z-20 h-[50vh] lg:w-[40vw] w-[90vw] lg:mt-12 rounded-lg bg-cover bg-center bg-no-repeat bg-bgImage3"></div>
     </section>
   );
 };

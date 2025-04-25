@@ -1,68 +1,72 @@
-import { Tag } from "lucide-react";
-import React from "react";
-import { BsDot } from "react-icons/bs";
-import { FaDotCircle } from "react-icons/fa";
-import { Typewriter } from "react-simple-typewriter";
+import React from 'react';
+import { FaDotCircle } from 'react-icons/fa';
+import { Typewriter } from 'react-simple-typewriter';
 
-const websiteServices = [
+const features = [
   {
-    tag: "Custom Websites for Your Business:",
-    tagline:
-      "We design websites that align with your brand identity and captivate your audience.",
+    title: 'Bespoke Web Solutions',
+    description:
+      'We build custom websites tailored to your brand and business objectives, ensuring a seamless user experience and robust performance.',
   },
   {
-    tag: "Vast Industry Experience:",
-    tagline:
-      "With thousands of websites built, our expertise spans from simple CMS platforms to complex web applications.",
+    title: 'Proven Track Record',
+    description:
+      'With over a decade of experience and hundreds of successful projects, our team delivers solutions you can trust.',
   },
   {
-    tag: "Easy-to-Use and Maintainable:",
-    tagline:
-      "Our websites are intuitive and simple to manage, giving you full control over updates and content.",
+    title: 'Easy Management',
+    description:
+      'Our sites come with intuitive content management systems, giving you full control over updates without technical overhead.',
   },
   {
-    tag: "Professional Support and Training:",
-    tagline:
-      "Our team offers expert guidance, training, and ongoing assistance to help you maximize your website's potential.",
+    title: 'Dedicated Support',
+    description:
+      'From initial training to ongoing maintenance, our support team ensures your site stays secure, updated, and optimised.',
   },
 ];
 
-const WhyJoroservice = () => {
+const WhyJoroService = () => {
   return (
-    <div className="grid pb-16 lg:h-[50vh] bg-white grid-cols-1 lg:grid-cols-2 gap-4  px-16 justify-center ">
-      <div className=" lg:col-span-1 lg:pt-8">
-        <h1 className="text-black font-normal text-2xl  lg:text-4xl px-8 lg:py-6">
-          Why choose JoroServices as your
-          <Typewriter
-            words={[
-              "  website development partner?",
-              " software development partner?",
-            ]}
-            loop={true}
-            cursor
-            cursorStyle="<"
-            typeSpeed={80}
-            deleteSpeed={50}
-            cursorColor="blue"
-            delaySpeed={1000}
-          />
-        </h1>
-      </div>
+    <section className="bg-white text-black py-16 px-4 lg:px-32">
+      <div className="lg:grid lg:grid-cols-2 gap-8">
+        {/* Headline */}
+        <div>
+          <h2 className="text-3xl lg:text-4xl font-semibold mb-4">
+            Why Choose Joro Services as Your{' '}
+            <Typewriter
+              words={[
+                'web development partner?',
+                'software solutions provider?'
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </h2>
+        </div>
 
-      <div className="flex flex-col gap-5">
-        {websiteServices.map((serv, i) => {
-          return (
-            <div className="flex flex-row items-center gap-6" key={i}>
-              <FaDotCircle className="text-lg text-accent" />
-              <div className=" text-black/60 text-sm pr-8">
-                <span className="text-black">{serv.tag}</span> {serv.tagline}
+        {/* Feature List */}
+        <div className="space-y-6">
+          {features.map((item, idx) => (
+            <div key={idx} className="flex items-start gap-4">
+              <FaDotCircle className="text-accent-dark mt-1" />
+              <div>
+                <h3 className="text-xl font-semibold text-black">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-700 mt-1">
+                  {item.description}
+                </p>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default WhyJoroservice;
+export default WhyJoroService;
